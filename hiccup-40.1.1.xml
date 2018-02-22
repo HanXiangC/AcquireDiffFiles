@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="hiccup-40.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="hiccup-40.1.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--each verb adds a manner predicate-->
         <MEMBER name="belch" wn="belch%2:29:00" grouping=""/>
@@ -18,7 +17,7 @@
         <MEMBER name="sniffle" wn="sniffle%2:29:00" grouping=""/>
         <MEMBER name="snore" wn="snore%2:29:00" grouping=""/>
         <MEMBER name="snuff" wn="snuff%2:29:02" grouping=""/>
-        <MEMBER name="snuffle" wn="snuffle%2:29:00" grouping=""/>
+        <MEMBER name="snuffle" wn="snuffle%2:29:00" grouping="snuffle.02"/>
         <MEMBER name="swallow" wn="swallow%2:34:00" grouping="swallow.01"/>
         <MEMBER name="wheeze" wn="wheeze%2:29:00" grouping=""/>
         <MEMBER name="yawn" wn="yawn%2:29:00" grouping=""/>
@@ -60,4 +59,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-

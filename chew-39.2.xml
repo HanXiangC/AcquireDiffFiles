@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="chew-39.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="chew-39.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -20,8 +19,9 @@
             <MEMBERS>
                 <MEMBER name="chew" wn="chew%2:34:00" grouping="chew.01"/>
                 <MEMBER name="chomp" wn="chomp%2:34:00" grouping=""/>
-                <MEMBER name="crunch" wn="crunch%2:34:00" grouping=""/>
+                <MEMBER name="crunch" wn="crunch%2:34:00" grouping="crunch.02"/>
                 <MEMBER name="gnaw" wn="gnaw%2:35:00" grouping=""/>
+                <MEMBER name="gum" wn="gum%2:34:00" grouping="gum.02"/>
                 <MEMBER name="masticate" wn="" grouping=""/>
                 <MEMBER name="munch" wn="munch%2:34:00" grouping=""/>
                 <MEMBER name="nibble" wn="nibble%2:35:00 nibble%2:35:02" grouping="nibble.01"/>
@@ -112,7 +112,7 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="" primary="NP V PP.patient" secondary="PPPatient-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="" primary="NP V PP.patient" secondary="PP; Patient-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>Cynthia nibbled on the carrot.</EXAMPLE>
                     </EXAMPLES>
@@ -203,7 +203,7 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="" primary="NP V PP.patient" secondary="PPPatient-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="" primary="NP V PP.patient" secondary="PP; Patient-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>Cynthia sipped from the drink.</EXAMPLE>
                     </EXAMPLES>

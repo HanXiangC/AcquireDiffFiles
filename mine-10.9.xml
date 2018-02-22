@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="mine-10.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="mine-10.9" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="mine" wn="mine%2:34:00" grouping="mine.01"/>
         <MEMBER name="quarry" wn="quarry%2:34:00" grouping=""/>
@@ -17,7 +16,12 @@
                 <SELRESTR Value="+" type="concrete"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Source">
+        <THEMROLE type="Initial_Location">
+            <SELRESTRS>
+                <SELRESTR Value="+" type="location"/>
+            </SELRESTRS>
+        </THEMROLE>
+        <THEMROLE type="Destination">
             <SELRESTRS>
                 <SELRESTR Value="+" type="location"/>
             </SELRESTRS>
@@ -45,24 +49,28 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Source"/>
+                        <ARG type="ThemRole" value="?Initial_Location"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Source"/>
+                        <ARG type="ThemRole" value="?Destination"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.source" secondary="PPsource-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.initial_location" secondary="PP; initial_location-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The men mined the gold from the abandoned mine.</EXAMPLE>
             </EXAMPLES>
@@ -79,7 +87,7 @@
                         <SELRESTR Value="+" type="src"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Source">
+                <NP value="Initial_Location">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -90,18 +98,22 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="ThemRole" value="Initial_Location"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="ThemRole" value="?Destination"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -109,4 +121,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-

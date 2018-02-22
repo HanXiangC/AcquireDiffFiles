@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="marry-36.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="marry-36.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="court" wn="court%2:41:00 court%2:41:10" grouping="court.02"/>
         <MEMBER name="cuddle" wn="cuddle%2:35:00 cuddle%2:35:01" grouping=""/>
@@ -10,22 +9,18 @@
         <MEMBER name="hug" wn="hug%2:35:01" grouping="hug.01"/>
         <MEMBER name="kiss" wn="kiss%2:35:00" grouping="kiss.01"/>
         <MEMBER name="marry" wn="marry%2:41:00" grouping="marry.01"/>
+        <MEMBER name="neck" wn="neck%2:35:00" grouping=""/>
         <MEMBER name="nuzzle" wn="nuzzle%2:35:02 nuzzle%2:35:00" grouping=""/>
         <MEMBER name="pet" wn="pet%2:35:00 pet%2:35:01" grouping=""/>
         <!-- Removed "pass" from class -->
     </MEMBERS>
     <THEMROLES>
-        <THEMROLE type="Actor">
+        <THEMROLE type="Agent">
             <SELRESTRS>
                 <SELRESTR Value="+" type="animate"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Actor1">
-            <SELRESTRS>
-                <SELRESTR Value="+" type="animate"/>
-            </SELRESTRS>
-        </THEMROLE>
-        <THEMROLE type="Actor2">
+        <THEMROLE type="Co-Agent">
             <SELRESTRS>
                 <SELRESTR Value="+" type="animate"/>
             </SELRESTRS>
@@ -33,12 +28,12 @@
     </THEMROLES>
     <FRAMES>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.1" primary="NP V" secondary="IntransitivePlural Subject" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.1" primary="NP V" secondary="Intransitive; Plural Subject" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>Bill and Kathy married.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Actor">
+                <NP value="Agent">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="plural"/>
                     </SYNRESTRS>
@@ -49,8 +44,8 @@
                 <PRED value="social_interaction">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Actor_i"/>
-                        <ARG type="ThemRole" value="Actor_j"/>
+                        <ARG type="ThemRole" value="Agent_i"/>
+                        <ARG type="ThemRole" value="Agent_j"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -61,11 +56,11 @@
                 <EXAMPLE>Bill married Kathy.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Actor1">
+                <NP value="Agent">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
-                <NP value="Actor2">
+                <NP value="Co-Agent">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -73,8 +68,8 @@
                 <PRED value="social_interaction">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Actor1"/>
-                        <ARG type="ThemRole" value="Actor2"/>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="ThemRole" value="Co-Agent"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>

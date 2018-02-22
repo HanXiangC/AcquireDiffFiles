@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="sound_existence-47.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="sound_existence-47.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Each member adds a predicate for the quality of the sound-->
         <MEMBER name="echo" wn="echo%2:39:00" grouping="echo.02"/>
@@ -45,7 +44,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP.location" secondary="PPlocative-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP.location" secondary="PP; locative-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The voices echoed through the hall.</EXAMPLE>
             </EXAMPLES>
@@ -70,7 +69,7 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
@@ -80,7 +79,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="6.1" primary="There V NP" secondary="NP-PPExpletive-there Subject" xtag=""/>
+            <DESCRIPTION descriptionNumber="6.1" primary="There V NP" secondary="NP-PP; Expletive-there Subject" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>There echoed voices through the hall.</EXAMPLE>
             </EXAMPLES>
@@ -128,7 +127,7 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
@@ -139,7 +138,7 @@
             <!--some verbs-->
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="2.3" primary="NP.location V NP.theme" secondary="PPLocation Subject, with-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="2.3" primary="NP.location V NP.theme" secondary="PP; Location Subject, with-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The hall echoed with voices.</EXAMPLE>
             </EXAMPLES>

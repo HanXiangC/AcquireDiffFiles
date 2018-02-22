@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="appeal-31.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="appeal-31.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
-        <THEMROLE type="Cause">
+        <THEMROLE type="Stimulus">
             <SELRESTRS/>
         </THEMROLE>
         <THEMROLE type="Experiencer">
@@ -14,12 +13,12 @@
     </THEMROLES>
     <FRAMES>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP.experiencer" secondary="PPExperiencer-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP.experiencer" secondary="PP; Experiencer-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>This painting appeals to Malinda.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Cause">
+                <NP value="Stimulus">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -38,10 +37,10 @@
                         <ARG type="ThemRole" value="Experiencer"/>
                     </ARGS>
                 </PRED>
-                <PRED value="cause">
+                <PRED value="in_reaction_to">
                     <ARGS>
-                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="Event" value="E"/>
+                        <ARG type="ThemRole" value="Stimulus"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -55,12 +54,12 @@
             <THEMROLES/>
             <FRAMES>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="" primary="NP V PP.experiencer" secondary="PPat-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="" primary="NP V PP.experiencer" secondary="PP; at-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>The irritation niggled at Melinda.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Cause">
+                        <NP value="Stimulus">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -79,10 +78,10 @@
                                 <ARG type="ThemRole" value="Experiencer"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="cause">
+                        <PRED value="in_reaction_to">
                             <ARGS>
-                                <ARG type="ThemRole" value="Cause"/>
                                 <ARG type="Event" value="E"/>
+                                <ARG type="ThemRole" value="Stimulus"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -98,12 +97,12 @@
             <THEMROLES/>
             <FRAMES>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="" primary="NP V PP.experiencer" secondary="PPon-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="" primary="NP V PP.experiencer" secondary="PP; on-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>The music grates on me.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Cause">
+                        <NP value="Stimulus">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -122,10 +121,10 @@
                                 <ARG type="ThemRole" value="Experiencer"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="cause">
+                        <PRED value="in_reaction_to">
                             <ARGS>
-                                <ARG type="ThemRole" value="Cause"/>
                                 <ARG type="Event" value="E"/>
+                                <ARG type="ThemRole" value="Stimulus"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -136,7 +135,6 @@
         <VNSUBCLASS ID="appeal-31.4-3">
             <MEMBERS>
                 <MEMBER name="appeal" wn="appeal%2:37:00" grouping="appeal.03"/>
-                <MEMBER name="matter" wn="matter%2:42:00" grouping="matter.01"/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -146,7 +144,7 @@
                         <EXAMPLE>Stuff matters.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Cause">
+                        <NP value="Stimulus">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -159,10 +157,10 @@
                                 <ARG type="ThemRole" value="?Experiencer"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="cause">
+                        <PRED value="in_reaction_to">
                             <ARGS>
-                                <ARG type="ThemRole" value="Cause"/>
                                 <ARG type="Event" value="E"/>
+                                <ARG type="ThemRole" value="Stimulus"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>

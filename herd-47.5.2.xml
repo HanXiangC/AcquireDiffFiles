@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="herd-47.5.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="herd-47.5.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="accumulate" wn="accumulate%2:40:00 accumulate%2:30:00" grouping="accumulate.01 accumulate.02"/>
         <MEMBER name="aggregate" wn="aggregate%2:35:00" grouping=""/>
@@ -13,9 +12,10 @@
         <MEMBER name="flock" wn="flock%2:38:01 flock%2:38:00" grouping="flock.01"/>
         <MEMBER name="gather" wn="gather%2:35:00 gather%2:41:00 gather%2:30:00 gather%2:41:02" grouping="gather.01 gather.02 gather.03"/>
         <MEMBER name="group" wn="group%2:31:00 group%2:33:00" grouping="group.01"/>
-        <MEMBER name="herd" wn="herd%2:38:01 herd%2:38:00 herd%2:42:00" grouping=""/>
+        <MEMBER name="herd" wn="herd%2:38:01 herd%2:38:00 herd%2:42:00" grouping="herd.01"/>
         <MEMBER name="huddle" wn="huddle%2:38:01" grouping=""/>
         <MEMBER name="mass" wn="mass%2:38:00" grouping="mass.01"/>
+        <MEMBER name="reconvene" wn="reconvene%2:38:00" grouping=""/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -46,7 +46,6 @@
                 <PRED bool="!" value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Theme_i"/>
                         <ARG type="ThemRole" value="Theme_j"/>
                     </ARGS>
@@ -54,7 +53,6 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Theme_i"/>
                         <ARG type="ThemRole" value="Theme_j"/>
                     </ARGS>
@@ -63,7 +61,7 @@
             <!--some verbs-->
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="1.1.2" primary="NP V NP.theme" secondary="NPCausative variant" xtag="0.2"/>
+            <DESCRIPTION descriptionNumber="1.1.2" primary="NP V NP.theme" secondary="NP; Causative variant" xtag="0.2"/>
             <EXAMPLES>
                 <EXAMPLE>The teacher gathered the kids.</EXAMPLE>
             </EXAMPLES>
@@ -86,7 +84,6 @@
                 <PRED bool="!" value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Theme_i"/>
                         <ARG type="ThemRole" value="Theme_j"/>
                     </ARGS>
@@ -94,7 +91,6 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Theme_i"/>
                         <ARG type="ThemRole" value="Theme_j"/>
                     </ARGS>
@@ -126,7 +122,6 @@
                 <PRED bool="!" value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="VerbSpecific" value="Theme_i"/>
                         <ARG type="VerbSpecific" value="Theme_j"/>
                     </ARGS>
@@ -134,7 +129,6 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="VerbSpecific" value="Theme_i"/>
                         <ARG type="VerbSpecific" value="Theme_j"/>
                     </ARGS>

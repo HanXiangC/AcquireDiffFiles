@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="hurt-40.8.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="hurt-40.8.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
-        <MEMBER name="hit" wn="" grouping=""/>
-        <MEMBER name="jam" wn="" grouping=""/>
-        <MEMBER name="graze" wn="" grouping=""/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Experiencer">
@@ -12,17 +8,18 @@
                 <SELRESTR Value="+" type="animate"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Patient">
-            <SELRESTRS logic="or">
-                <SELRESTR Value="+" type="body_part"/>
-                <SELRESTR Value="+" type="refl"/>
-            </SELRESTRS>
-        </THEMROLE>
     </THEMROLES>
     <FRAMES/>
     <SUBCLASSES>
         <VNSUBCLASS ID="hurt-40.8.3-1">
             <MEMBERS>
+                <MEMBER name="hit" wn="" grouping=""/>
+                <MEMBER name="jam" wn="" grouping=""/>
+                <MEMBER name="graze" wn="" grouping="graze.02"/>
+                <MEMBER name="chafe" wn="chafe%2:35:00" grouping="chafe.01"/>
+                <MEMBER name="overstretch" wn="" grouping=""/>
+                <MEMBER name="rick" wn="" grouping=""/>
+                <MEMBER name="sting" wn="" grouping="sting.01"/>
                 <MEMBER name="stub" wn="stub%2:29:00" grouping=""/>
             </MEMBERS>
             <THEMROLES>
@@ -48,9 +45,33 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="?Initial_State"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="harmed">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                            </ARGS>
+                        </PRED>
                         <PRED value="harmed">
                             <ARGS>
-                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Patient"/>
                             </ARGS>
                         </PRED>
@@ -69,10 +90,11 @@
                         <!--verb adds manner predicate for how the Patient is hurt-->
                         <MEMBER name="break" wn="break%2:35:13 break%2:35:09 break%2:30:15 break%2:29:04" grouping="break.01 break.08"/>
                         <MEMBER name="chip" wn="chip%2:35:00" grouping="chip.01"/>
-                        <MEMBER name="fracture" wn="fracture%2:29:02 fracture%2:29:01 fracture%2:29:00" grouping=""/>
+                        <MEMBER name="fracture" wn="fracture%2:29:02 fracture%2:29:01 fracture%2:29:00" grouping="fracture.02"/>
                         <MEMBER name="pull" wn="pull%2:29:00" grouping="pull.05"/>
                         <MEMBER name="rupture" wn="rupture%2:35:00" grouping=""/>
                         <MEMBER name="split" wn="split%2:35:00" grouping="split.01"/>
+                        <MEMBER name="splinter" wn="splinter%2:30:00" grouping="splinter.01"/>
                         <MEMBER name="sprain" wn="sprain%2:29:00" grouping=""/>
                         <MEMBER name="tear" wn="" grouping=""/>
                         <MEMBER name="turn" wn="turn%2:29:00" grouping="turn.10"/>
@@ -92,9 +114,33 @@
                                 <VERB/>
                             </SYNTAX>
                             <SEMANTICS>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="start(E)"/>
+                                        <ARG type="ThemRole" value="?Initial_State"/>
+                                        <ARG type="ThemRole" value="Patient"/>
+                                        <ARG type="Constant" value="ch_of_state"/>
+                                        <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="result(E)"/>
+                                        <ARG type="ThemRole" value="?Result"/>
+                                        <ARG type="ThemRole" value="Patient"/>
+                                        <ARG type="Constant" value="ch_of_state"/>
+                                        <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED bool="!" value="harmed">
+                                    <ARGS>
+                                        <ARG type="Event" value="start(E)"/>
+                                        <ARG type="ThemRole" value="Patient"/>
+                                    </ARGS>
+                                </PRED>
                                 <PRED value="harmed">
                                     <ARGS>
-                                        <ARG type="Event" value="during(E)"/>
+                                        <ARG type="Event" value="result(E)"/>
                                         <ARG type="ThemRole" value="Patient"/>
                                     </ARGS>
                                 </PRED>
@@ -130,6 +176,7 @@
                 <MEMBER name="skin" wn="skin%2:35:02" grouping=""/>
                 <MEMBER name="strain" wn="strain%2:34:00" grouping="strain.01"/>
                 <MEMBER name="sunburn" wn="" grouping=""/>
+                <MEMBER name="wrench" wn="wrench%2:29:00" grouping="wrench.03"/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -144,13 +191,39 @@
                         </NP>
                         <VERB/>
                         <NP value="Patient">
-                            <SYNRESTRS/>
+                            <SYNRESTRS>
+                               <SYNRESTR Value="+" type="refl"/>
+                            </SYNRESTRS>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="?Initial_State"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="harmed">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                            </ARGS> 
+                        </PRED>
                         <PRED value="harmed">
                             <ARGS>
-                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Patient"/>
                             </ARGS>
                         </PRED>
@@ -177,10 +250,34 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="?Initial_State"/>
+                                <ARG type="ThemRole" value="?Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="?Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="harmed">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="?Patient"/>
+                            </ARGS>
+                        </PRED>
                         <PRED value="harmed">
                             <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="?Patient"/>
                             </ARGS>
                         </PRED>
                         <PRED value="experience">
@@ -196,4 +293,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-

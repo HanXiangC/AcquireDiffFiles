@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="swat-18.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="swat-18.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Removed "shoot (gun)" from class because misclassified-->
         <MEMBER name="bite" wn="bite%2:35:00 ?bite%2:35:01" grouping="bite.01 bite.02"/>
         <MEMBER name="chop" wn="chop%2:35:01" grouping="chop.01"/>
-        <MEMBER name="claw" wn="claw%2:35:01 claw%2:35:00" grouping=""/>
+        <MEMBER name="claw" wn="claw%2:35:01 claw%2:35:00" grouping="claw.03"/>
         <MEMBER name="kick" wn="kick%2:35:01 kick%2:38:00 kick%2:35:00" grouping="kick.01"/>
         <MEMBER name="paw" wn="paw%2:35:01" grouping=""/>
         <MEMBER name="peck" wn="peck%2:35:01 peck%2:35:00" grouping=""/>
@@ -32,6 +31,14 @@
             <SELRESTRS>
                 <SELRESTR Value="+" type="solid"/>
             </SELRESTRS>
+        </THEMROLE>
+         <THEMROLE type="Location">
+            <SELRESTRS>
+                <SELRESTR Value="+" type="concrete"/>
+            </SELRESTRS>
+        </THEMROLE>
+         <THEMROLE type="Result">
+                <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
     <FRAMES>
@@ -87,7 +94,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.instrument" secondary="NP-PPInstrument-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.instrument" secondary="NP-PP; Instrument-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>Paula swatted the fly with a dishcloth.</EXAMPLE>
             </EXAMPLES>
@@ -141,7 +148,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -230,7 +237,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -240,9 +247,9 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP ADJP" secondary="NP-ADJPResultative" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP ADJP" secondary="NP-ADJP; Resultative" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Paula bit the bag open.</EXAMPLE>
+                <EXAMPLE>Paula sliced the bag open.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -252,7 +259,9 @@
                 <NP value="Patient">
                     <SYNRESTRS/>
                 </NP>
-                <ADJ/>
+                <NP value="Result">
+                    <SYNRESTRS/>
+                </NP>
             </SYNTAX>
             <SEMANTICS>
                 <PRED value="cause">
@@ -289,16 +298,28 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP ADJP PP.instrument" secondary="NP-ADJP-PPResultative, Instrument-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP ADJP PP.instrument" secondary="NP-ADJP-PP; Resultative, Instrument-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>Paula swatted the fly dead with a dishcloth.</EXAMPLE>
             </EXAMPLES>
@@ -310,7 +331,9 @@
                 <NP value="Patient">
                     <SYNRESTRS/>
                 </NP>
-                <ADJ/>
+                <NP value="Result">
+                    <SYNRESTRS/>
+                </NP>
                 <PREP value="with">
                     <SELRESTRS/>
                 </PREP>
@@ -353,13 +376,25 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -369,9 +404,9 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP PP.oblique" secondary="NP-PPResult-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP PP.result" secondary="NP-PP; Result-PP" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>The cat clawed the counch to pieces.</EXAMPLE>
+                <EXAMPLE>The cat clawed the couch to pieces.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -384,7 +419,7 @@
                 <PREP value="to into">
                     <SELRESTRS/>
                 </PREP>
-                <NP value="Oblique">
+                <NP value="Result">
                     <SELRESTRS>
                         <SELRESTR Value="+" type="state"/>
                     </SELRESTRS>
@@ -425,16 +460,28 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP PP.oblique PP.instrument" secondary="NP-PP-PPResult-PP, Instrument-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.4" primary="NP V NP PP.result PP.instrument" secondary="NP-PP-PP; Result-PP, Instrument-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The cat clawed the counch to pieces with her sharp nails.</EXAMPLE>
             </EXAMPLES>
@@ -449,7 +496,7 @@
                 <PREP value="to into">
                     <SELRESTRS/>
                 </PREP>
-                <NP value="Oblique">
+                <NP value="Result">
                     <SELRESTRS>
                         <SELRESTR Value="+" type="state"/>
                     </SELRESTRS>
@@ -496,13 +543,25 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -512,7 +571,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="" primary="NP V NP PP.oblique" secondary="NP-PPBody-part-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="" primary="NP V NP PP.location" secondary="NP-PP; Body-part-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>Paula swatted Deirdre on the back.</EXAMPLE>
             </EXAMPLES>
@@ -529,10 +588,10 @@
                         <SELRESTR Value="+" type="loc"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Oblique">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="+" type="body_part"/>
-                    </SYNRESTRS>
+                <NP value="Location">
+                    <SELRESTRS>
+                        <SELRESTR Value="+" type="body_part"/>
+                    </SELRESTRS>
                 </NP>
             </SYNTAX>
             <SEMANTICS>
@@ -575,15 +634,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-
-
-
-
-
-
-
-
-
-

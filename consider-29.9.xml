@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="consider-29.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="consider-29.9" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -12,7 +11,7 @@
         <THEMROLE type="Theme">
             <SELRESTRS/>
         </THEMROLE>
-        <THEMROLE type="Predicate">
+        <THEMROLE type="Attribute">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
@@ -73,19 +72,16 @@
     <SUBCLASSES>
         <VNSUBCLASS ID="consider-29.9-1">
             <MEMBERS>
-                <MEMBER name="view" wn="" grouping=""/>
                 <MEMBER name="acknowledge" wn="" grouping=""/>
                 <MEMBER name="deem" wn="deem%2:31:00" grouping="deem.01"/>
                 <MEMBER name="esteem" wn="esteem%2:31:00" grouping=""/>
                 <MEMBER name="rate" wn="rate%2:31:00" grouping="rate.02 rate.03"/>
                 <MEMBER name="reckon" wn="reckon%2:31:00" grouping="reckon.01"/>
-                <MEMBER name="report" wn="report%2:32:01" grouping="report.02"/>
-                
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.predicate" secondary="NP-P-INGas-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.attribute" secondary="NP-P-ING; as-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>They considered him as being stupid.</EXAMPLE>
                     </EXAMPLES>
@@ -95,12 +91,22 @@
                         </NP>
                         <VERB/>
                         <NP value="Theme">
+                            <SYNRESTRS/>
+                        </NP> 
+                        <NP value="Attribute">
                             <SYNRESTRS>
                                 <SYNRESTR Value="+" type="np_p_ing"/>
                             </SYNRESTRS>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="characterize">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Attribute"/>
+                            </ARGS>
+                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -166,9 +172,7 @@
             <SUBCLASSES>
                 <VNSUBCLASS ID="consider-29.9-1-1">
                     <MEMBERS>
-                        <MEMBER name="know" wn="" grouping=""/>
-                        <MEMBER name="recognize" wn="" grouping=""/>
-                        <MEMBER name="see" wn="" grouping=""/>
+                        <MEMBER name="report" wn="report%2:32:01" grouping="report.01"/>
                     </MEMBERS>
                     <THEMROLES/>
                     <FRAMES>
@@ -187,8 +191,20 @@
                                         <SYNRESTR Value="+" type="np_ppart"/>
                                     </SYNRESTRS>
                                 </NP>
+                                <NP value="Attribute">
+                                            <SYNRESTRS>
+                                                <SYNRESTR Value="-" type="sentential"/>
+                                            </SYNRESTRS>
+                                        </NP>
                             </SYNTAX>
                             <SEMANTICS>
+                                <PRED value="characterize">
+                                    <ARGS>
+                                        <ARG type="Event" value="during(E)"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                        <ARG type="ThemRole" value="Attribute"/>
+                                    </ARGS>
+                                </PRED>
                                 <PRED value="consider">
                                     <ARGS>
                                         <ARG type="Event" value="during(E)"/>
@@ -280,9 +296,7 @@
                     <SUBCLASSES>
                         <VNSUBCLASS ID="consider-29.9-1-1-1">
                             <MEMBERS>
-                                <MEMBER name="consider" wn="consider%2:32:02" grouping="consider.02"/>
-                                <MEMBER name="remember" wn="" grouping=""/>
-                                <MEMBER name="imagine" wn="" grouping=""/>
+                                <MEMBER name="consider" wn="consider%2:32:02" grouping="consider.01 consider.02"/>
                             </MEMBERS>
                             <THEMROLES/>
                             <FRAMES>
@@ -325,9 +339,20 @@
                                         <NP value="Theme">
                                             <SYNRESTRS/>
                                         </NP>
-                                        <ADJ/>
+                                        <NP value="Attribute">
+                                            <SYNRESTRS>
+                                                <SYNRESTR Value="-" type="sentential"/>
+                                            </SYNRESTRS>
+                                        </NP>
                                     </SYNTAX>
                                     <SEMANTICS>
+                                        <PRED value="characterize">
+                                            <ARGS>
+                                                <ARG type="Event" value="during(E)"/>
+                                                <ARG type="ThemRole" value="Theme"/>
+                                                <ARG type="ThemRole" value="Attribute"/>
+                                            </ARGS>
+                                        </PRED>
                                         <PRED value="consider">
                                             <ARGS>
                                                 <ARG type="Event" value="during(E)"/>
@@ -350,13 +375,20 @@
                                         <NP value="Theme">
                                             <SYNRESTRS/>
                                         </NP>
-                                        <NP value="Predicate">
+                                        <NP value="Attribute">
                                             <SYNRESTRS>
                                                 <SYNRESTR Value="-" type="sentential"/>
                                             </SYNRESTRS>
                                         </NP>
                                     </SYNTAX>
                                     <SEMANTICS>
+                                        <PRED value="characterize">
+                                            <ARGS>
+                                                <ARG type="Event" value="during(E)"/>
+                                                <ARG type="ThemRole" value="Theme"/>
+                                                <ARG type="ThemRole" value="Attribute"/>
+                                            </ARGS>
+                                        </PRED>
                                         <PRED value="consider">
                                             <ARGS>
                                                 <ARG type="Event" value="during(E)"/>
@@ -367,7 +399,7 @@
                                     </SEMANTICS>
                                 </FRAME>
                                 <FRAME>
-                                    <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.predicate" secondary="NP-PP-PREDfor-PP" xtag=""/>
+                                    <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.attribute" secondary="NP-PP-PRED; for-PP" xtag=""/>
                                     <EXAMPLES>
                                         <EXAMPLE>They considered him for professor.</EXAMPLE>
                                     </EXAMPLES>
@@ -382,13 +414,20 @@
                                         <PREP value="for">
                                             <SELRESTRS/>
                                         </PREP>
-                                        <NP value="Predicate">
+                                        <NP value="Attribute">
                                             <SYNRESTRS>
                                                 <SYNRESTR Value="-" type="sentential"/>
                                             </SYNRESTRS>
                                         </NP>
                                     </SYNTAX>
                                     <SEMANTICS>
+                                        <PRED value="characterize">
+                                            <ARGS>
+                                                <ARG type="Event" value="during(E)"/>
+                                                <ARG type="ThemRole" value="Theme"/>
+                                                <ARG type="ThemRole" value="Attribute"/>
+                                            </ARGS>
+                                        </PRED>
                                         <PRED value="consider">
                                             <ARGS>
                                                 <ARG type="Event" value="during(E)"/>
@@ -408,7 +447,7 @@
                                             <SYNRESTRS/>
                                         </NP>
                                         <VERB/>
-                                        <NP value="Topic">
+                                        <NP value="Theme">
                                             <SYNRESTRS>
                                                 <SYNRESTR Value="+" type="wheth_inf"/>
                                             </SYNRESTRS>
@@ -433,11 +472,10 @@
         </VNSUBCLASS>
         <VNSUBCLASS ID="consider-29.9-2">
             <MEMBERS>
-                <MEMBER name="suspect" wn="" grouping=""/>
-                <MEMBER name="think" wn="" grouping=""/>
-                <MEMBER name="feel" wn="" grouping=""/>
-                <MEMBER name="suppose" wn="" grouping=""/>
-                <MEMBER name="believe" wn="" grouping=""/>
+                <MEMBER name="suspect" wn="" grouping="suspect.01"/>
+                <MEMBER name="think" wn="" grouping="think.01"/>
+                <MEMBER name="suppose" wn="" grouping="suppose.02"/>
+                <MEMBER name="posit" wn="postulate%2:31:00" grouping=""/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -454,9 +492,20 @@
                         <NP value="Theme">
                             <SYNRESTRS/>
                         </NP>
-                        <ADJ/>
+                        <NP value="Attribute">
+                                            <SYNRESTRS>
+                                                <SYNRESTR Value="-" type="sentential"/>
+                                            </SYNRESTRS>
+                                        </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="characterize">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Attribute"/>
+                            </ARGS>
+                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -479,13 +528,20 @@
                         <NP value="Theme">
                             <SYNRESTRS/>
                         </NP>
-                        <NP value="Predicate">
+                        <NP value="Attribute">
                             <SYNRESTRS>
                                 <SYNRESTR Value="-" type="sentential"/>
                             </SYNRESTRS>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="characterize">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Attribute"/>
+                            </ARGS>
+                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -536,8 +592,20 @@
                                 <SYNRESTR Value="+" type="np_ppart"/>
                             </SYNRESTRS>
                         </NP>
+                        <NP value="Attribute">
+                                            <SYNRESTRS>
+                                                <SYNRESTR Value="-" type="sentential"/>
+                                            </SYNRESTRS>
+                                        </NP>
                     </SYNTAX>
                     <SEMANTICS>
+                        <PRED value="characterize">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Attribute"/>
+                            </ARGS>
+                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -578,12 +646,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-
-
-
-
-
-
-
