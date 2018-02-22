@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="separate-23.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="separate-23.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--REMOVED "dismember" misclassified-->
         <MEMBER name="disassociate" wn="disassociate%2:41:00" grouping=""/>
@@ -52,6 +53,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical/abstract"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -59,6 +61,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
+                        <ARG type="Constant" value="physical/abstract"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -91,6 +94,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical/abstract"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -98,6 +102,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
+                        <ARG type="Constant" value="physical/abstract"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -121,6 +126,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical/abstract"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -128,6 +134,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
+                        <ARG type="Constant" value="physical/abstract"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -137,7 +144,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADVP-Middle PP" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>The cream separated easily from milk.</EXAMPLE>
+                <EXAMPLE>Cream separates easily from milk.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -153,18 +160,15 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="together">
+                <PRED value="property">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="Co-Patient"/>
+                        <ARG type="ThemRole" value="Patient+Co-Patient"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
-                <PRED value="apart">
+                <PRED value="Adv">
                     <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="Co-Patient"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -172,7 +176,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADVP-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>The egg yolks and egg whites separated easily.</EXAMPLE>
+                <EXAMPLE>Egg yolks and egg whites separate easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -184,18 +188,15 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="together">
+                <PRED value="property">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient_i"/>
-                        <ARG type="ThemRole" value="Patient_j"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
-                <PRED value="apart">
+                <PRED value="Adv">
                     <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Patient_i"/>
-                        <ARG type="ThemRole" value="Patient_j"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -236,6 +237,7 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
+                                <ARG type="Constant" value="physical/abstract"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -243,6 +245,7 @@
                         <PRED value="apart">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
+                                <ARG type="Constant" value="physical/abstract"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -282,6 +285,7 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
+                                <ARG type="Constant" value="physical/abstract"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -289,6 +293,7 @@
                         <PRED value="apart">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
+                                <ARG type="Constant" value="physical/abstract"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="base-97.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="base-97.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="base" wn="base%2:31:00" grouping="base.01"/>
         <MEMBER name="establish" wn="establish%2:31:03" grouping="establish.02"/>
@@ -153,7 +154,7 @@
 		</PREP>
                 <NP value="Source">
                     <SYNRESTRS>
-                        <SYNRESTR Value="+" type="ac_ing"/>
+                        <SYNRESTR Value="+" type="acc_ing"/>
                     </SYNRESTRS>
                 </NP>
             </SYNTAX>
@@ -176,3 +177,6 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+

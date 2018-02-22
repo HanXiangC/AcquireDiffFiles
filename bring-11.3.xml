@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="bring-11.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="bring-11.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <!--We should also specify deictic predicates, where direction is either towards or away from the "place of speaking" or the "point from which the action is regarded"-->
     <MEMBERS>
         <MEMBER name="take" wn="take%2:38:09 take%2:38:10 take%2:42:10" grouping="take.04"/>
@@ -102,13 +103,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E0)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="equals">
@@ -123,13 +122,11 @@
                         <ARG type="ThemRole" value="Agent"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E1)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -167,13 +164,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E0)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="equals">
@@ -188,13 +183,11 @@
                         <ARG type="ThemRole" value="Agent"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E1)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -234,13 +227,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E0)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="equals">
@@ -255,13 +246,11 @@
                         <ARG type="ThemRole" value="Agent"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E1)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -307,22 +296,18 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E0)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E0)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="equals">
@@ -337,22 +322,18 @@
                         <ARG type="ThemRole" value="Agent"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E1)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E1)"/>
                         <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="ThemRole" value="Destination"/> 
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Destination"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -395,22 +376,18 @@
                         <ARG type="ThemRole" value="Instrument"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E0)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/> 
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E1)"/>
                         <ARG type="ThemRole" value="Instrument"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/> 
                     </ARGS>
                 </PRED>
                 <PRED value="equals">
@@ -473,13 +450,11 @@
                                 <ARG type="ThemRole" value="Destination"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="location">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
                                 <ARG type="ThemRole" value="Destination"/>
-                                <ARG type="Constant" value="ch_of_loc"/>
-                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">
@@ -523,6 +498,7 @@
                         <PRED bool="!" value="together">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
+                                <ARG type="Constant" value="abstract/physical"/>
                                 <ARG type="ThemRole" value="Theme_i"/>
                                 <ARG type="ThemRole" value="Theme_j"/>
                             </ARGS>
@@ -530,6 +506,7 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
+                                <ARG type="Constant" value="abstract/physical"/>
                                 <ARG type="ThemRole" value="Theme_i"/>
                                 <ARG type="ThemRole" value="Theme_j"/>
                             </ARGS>

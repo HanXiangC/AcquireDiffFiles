@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="subjugate-42.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="subjugate-42.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
-        <MEMBER name="disenfranchise" wn="disenfranchise%2:41:00" grouping=""/>
+        <MEMBER name="disenfranchise" wn="disenfranchise%2:41:00"
+        grouping=""/>
         <MEMBER name="enslave" wn="enslave%2:41:00" grouping=""/>
         <MEMBER name="mob" wn="mob%2:38:00" grouping=""/>
         <MEMBER name="nourish" wn="nourish%2:34:00" grouping=""/> 
@@ -37,7 +39,6 @@
         <MEMBER name="slake" wn="slake%2:34:00 slake%2:30:00" grouping="slake.01"/>
         <MEMBER name="strangle" wn="" grouping=""/>
         <MEMBER name="kill" wn="" grouping=""/>
-        <MEMBER name="walk_over" wn="walk_over%2:33:00" grouping="walk.08"/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -72,39 +73,15 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="?Result"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="subjugated">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED> 
                 <PRED value="subjugated">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
@@ -131,43 +108,19 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="?Result"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="subjugated">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED> 
                 <PRED value="subjugated">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="utilize">
+                <PRED value="use">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -179,3 +132,6 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+

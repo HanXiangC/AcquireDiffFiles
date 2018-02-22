@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="poke-19" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="poke-19" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Some verbs add predicate indicating puncturing of Patient at end of event
         "in" predicate used to indicate puncturing of Patient-->
@@ -124,20 +125,14 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="location">
+                <PRED value="in">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Instrument"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="equals">
-                    <ARGS>
-                        <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="utilize">
+                <PRED value="use">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -194,7 +189,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="utilize">
+                <PRED value="use">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -269,7 +264,7 @@
                         <ARG type="ThemRole" value="Instrument"/>
                     </ARGS>
                 </PRED>
-                <PRED value="utilize">
+                <PRED value="use">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -319,3 +314,4 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+

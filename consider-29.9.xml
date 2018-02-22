@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="consider-29.9" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="consider-29.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -72,11 +73,14 @@
     <SUBCLASSES>
         <VNSUBCLASS ID="consider-29.9-1">
             <MEMBERS>
+                <MEMBER name="view" wn="" grouping="view.01"/>
                 <MEMBER name="acknowledge" wn="" grouping=""/>
                 <MEMBER name="deem" wn="deem%2:31:00" grouping="deem.01"/>
                 <MEMBER name="esteem" wn="esteem%2:31:00" grouping=""/>
                 <MEMBER name="rate" wn="rate%2:31:00" grouping="rate.02 rate.03"/>
                 <MEMBER name="reckon" wn="reckon%2:31:00" grouping="reckon.01"/>
+                <MEMBER name="report" wn="report%2:32:01" grouping="report.01"/>
+                
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -91,22 +95,12 @@
                         </NP>
                         <VERB/>
                         <NP value="Theme">
-                            <SYNRESTRS/>
-                        </NP> 
-                        <NP value="Attribute">
                             <SYNRESTRS>
                                 <SYNRESTR Value="+" type="np_p_ing"/>
                             </SYNRESTRS>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="characterize">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Attribute"/>
-                            </ARGS>
-                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -172,7 +166,9 @@
             <SUBCLASSES>
                 <VNSUBCLASS ID="consider-29.9-1-1">
                     <MEMBERS>
-                        <MEMBER name="report" wn="report%2:32:01" grouping="report.01"/>
+                        <MEMBER name="know" wn="" grouping=""/>
+                        <MEMBER name="recognize" wn="" grouping=""/>
+                        <MEMBER name="see" wn="" grouping="see.02"/>
                     </MEMBERS>
                     <THEMROLES/>
                     <FRAMES>
@@ -198,13 +194,6 @@
                                         </NP>
                             </SYNTAX>
                             <SEMANTICS>
-                                <PRED value="characterize">
-                                    <ARGS>
-                                        <ARG type="Event" value="during(E)"/>
-                                        <ARG type="ThemRole" value="Theme"/>
-                                        <ARG type="ThemRole" value="Attribute"/>
-                                    </ARGS>
-                                </PRED>
                                 <PRED value="consider">
                                     <ARGS>
                                         <ARG type="Event" value="during(E)"/>
@@ -297,6 +286,8 @@
                         <VNSUBCLASS ID="consider-29.9-1-1-1">
                             <MEMBERS>
                                 <MEMBER name="consider" wn="consider%2:32:02" grouping="consider.01 consider.02"/>
+                                <MEMBER name="remember" wn="" grouping="remember.01"/>
+                                <MEMBER name="imagine" wn="" grouping="imagine.01"/>
                             </MEMBERS>
                             <THEMROLES/>
                             <FRAMES>
@@ -346,13 +337,6 @@
                                         </NP>
                                     </SYNTAX>
                                     <SEMANTICS>
-                                        <PRED value="characterize">
-                                            <ARGS>
-                                                <ARG type="Event" value="during(E)"/>
-                                                <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="Attribute"/>
-                                            </ARGS>
-                                        </PRED>
                                         <PRED value="consider">
                                             <ARGS>
                                                 <ARG type="Event" value="during(E)"/>
@@ -382,13 +366,6 @@
                                         </NP>
                                     </SYNTAX>
                                     <SEMANTICS>
-                                        <PRED value="characterize">
-                                            <ARGS>
-                                                <ARG type="Event" value="during(E)"/>
-                                                <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="Attribute"/>
-                                            </ARGS>
-                                        </PRED>
                                         <PRED value="consider">
                                             <ARGS>
                                                 <ARG type="Event" value="during(E)"/>
@@ -421,13 +398,6 @@
                                         </NP>
                                     </SYNTAX>
                                     <SEMANTICS>
-                                        <PRED value="characterize">
-                                            <ARGS>
-                                                <ARG type="Event" value="during(E)"/>
-                                                <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="Attribute"/>
-                                            </ARGS>
-                                        </PRED>
                                         <PRED value="consider">
                                             <ARGS>
                                                 <ARG type="Event" value="during(E)"/>
@@ -474,8 +444,10 @@
             <MEMBERS>
                 <MEMBER name="suspect" wn="" grouping="suspect.01"/>
                 <MEMBER name="think" wn="" grouping="think.01"/>
+                <MEMBER name="feel" wn="" grouping="feel.03"/>
                 <MEMBER name="suppose" wn="" grouping="suppose.02"/>
                 <MEMBER name="posit" wn="postulate%2:31:00" grouping=""/>
+                <MEMBER name="believe" wn="" grouping="believe.01"/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -499,13 +471,6 @@
                                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="characterize">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Attribute"/>
-                            </ARGS>
-                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -535,13 +500,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="characterize">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Attribute"/>
-                            </ARGS>
-                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -599,13 +557,6 @@
                                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="characterize">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Attribute"/>
-                            </ARGS>
-                        </PRED>
                         <PRED value="consider">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
@@ -646,3 +597,12 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="coil-9.6" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="coil-9.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="loop" wn="loop%2:36:00 loop%2:35:00" grouping="loop.02"/>
         <MEMBER name="roll" wn="roll%2:35:00" grouping="roll.02"/>
@@ -22,15 +23,10 @@
                 <SELRESTR Value="+" type="elongated"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Initial_Location">
+        <THEMROLE type="Location">
             <SELRESTRS>
-                <SELRESTR Value="+" type="location"/>
+                <SELRESTR Value="+" type="concrete"/>
             </SELRESTRS>
-        </THEMROLE>
-        <THEMROLE type="Destination">
-            <SELRESTRS>
-                <SELRESTR Value="+" type="location"/>
-            </SELRESTRS> 
         </THEMROLE>
     </THEMROLES>
     <FRAMES>
@@ -52,7 +48,7 @@
                         <SELRESTR Value="+" type="path"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Destination">
+                <NP value="Location">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -63,22 +59,18 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="Prep">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/> 
+                        <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="Prep">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>  
+                        <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -105,7 +97,7 @@
                         <SELRESTR Value="+" type="path"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Destination">
+                <NP value="Location">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -116,22 +108,18 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="Prep">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="Prep">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>                     
+                        <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -139,7 +127,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle PP.location" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>That type of rope coiled easily around the post.</EXAMPLE>
+                <EXAMPLE>That type of rope coils easily around the post.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Theme">
@@ -152,34 +140,21 @@
                         <SELRESTR Value="+" type="path"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Destination">
+                <NP value="Location">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="rotational_motion">
+                <PRED value="property">
                     <ARGS>
-                        <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="Adv">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/> 
-                   </ARGS>
                 </PRED>
             </SEMANTICS>
         </FRAME>

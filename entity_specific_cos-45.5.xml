@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="entity_specific_cos-45.5" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="entity_specific_cos-45.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="apostatize" wn="" grouping=""/>
         <MEMBER name="atrophy" wn="" grouping=""/>
@@ -24,7 +25,7 @@
         <MEMBER name="green" wn="" grouping=""/>
         <MEMBER name="molder" wn="molder%2:30:00" grouping=""/>
         <MEMBER name="molt" wn="molt%2:29:00" grouping=""/>
-        <MEMBER name="moult" wn="moult%2:29:00" grouping=""/>
+        <MEMBER name="moult" wn="moult%2:39:00" grouping=""/>
         <MEMBER name="oxidize" wn="" grouping=""/>
         <MEMBER name="phosphoresce" wn="" grouping=""/>
 	<MEMBER name="progress" wn="" grouping=""/>
@@ -63,22 +64,11 @@
                 <VERB/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="VerbSpecific" value="Endstate"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -86,3 +76,4 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+

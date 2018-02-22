@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="continue-55.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="continue-55.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="continue" wn="continue%2:42:01 continue%2:32:00 continue%2:42:12 continue%2:42:11 continue%2:30:10" grouping="continue.01 continue.02"/>
     </MEMBERS>
@@ -13,7 +14,7 @@
         <THEMROLE type="Theme">
             <SELRESTRS/>
         </THEMROLE>
-        <THEMROLE type="Final_Time">
+        <THEMROLE type="Time">
             <SELRESTRS>
                 <SELRESTR Value="+" type="time"/>
             </SELRESTRS>
@@ -32,7 +33,7 @@
                 <VERB/>
                 <NP value="Theme">
                     <SYNRESTRS>
-                        <SYNRESTR Value="+" type="rs_to_inf"/>
+                        <SYNRESTR Value="+" type="to_inf_rs"/>
                     </SYNRESTRS>
                 </NP>
             </SYNTAX>
@@ -43,17 +44,10 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="do">
+                <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="time">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Final_Time"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -76,13 +70,6 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Final_Time"/>
-                    </ARGS>
-                </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
@@ -103,14 +90,7 @@
                         <ARG type="ThemRole" value="?Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="?Theme"/>
-                        <ARG type="ThemRole" value="?Final_Time"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="do">
+                <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
@@ -142,11 +122,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
+                <PRED value="Prep">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Final_Time"/>
+                        <ARG type="ThemRole" value="Time"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -175,17 +155,17 @@
                         <ARG type="ThemRole" value="?Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="do">
+                <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
+                <PRED value="Prep">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="?Theme"/>
-                        <ARG type="ThemRole" value="Final_Time"/>
+                        <ARG type="ThemRole" value="Time"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -193,3 +173,8 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+
+
+

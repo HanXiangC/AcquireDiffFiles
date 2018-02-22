@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="peer-30.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="peer-30.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="attend" wn="" grouping=""/>
         <MEMBER name="check" wn="check%2:31:00" grouping="check.01"/>
@@ -23,23 +24,23 @@
         <MEMBER name="stare" wn="stare%2:39:00" grouping="stare.01"/>
     </MEMBERS>
     <THEMROLES>
-        <THEMROLE type="Agent">
+        <THEMROLE type="Experiencer">
             <SELRESTRS>
                 <SELRESTR Value="+" type="animate"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Theme">
+        <THEMROLE type="Stimulus">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
     <FRAMES>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.2" primary="NP V PP.theme" secondary="PP; Theme-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V PP.stimulus" secondary="PP; Theme-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>We peered at the baby.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Agent">
+                <NP value="Experiencer">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -48,7 +49,7 @@
                         <SELRESTR Value="+" type="spatial"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Theme">
+                <NP value="Stimulus">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -56,14 +57,14 @@
                 <PRED value="perceive">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="ThemRole" value="Stimulus"/>
                     </ARGS>
                 </PRED>
                 <PRED value="in_reaction_to">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Stimulus"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>

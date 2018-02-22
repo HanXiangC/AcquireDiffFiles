@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="split-23.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="split-23.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="blow" wn="blow%2:38:00 blow%2:38:03" grouping="blow.01"/>
         <MEMBER name="break" wn="break%2:35:05" grouping="break.01"/>
@@ -72,6 +73,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -79,6 +81,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -112,6 +115,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -119,6 +123,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -146,6 +151,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -153,6 +159,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -177,6 +184,7 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -184,6 +192,7 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient_i"/>
                         <ARG type="ThemRole" value="Patient_j"/>
                     </ARGS>
@@ -193,7 +202,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V PP ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>The twigs broke off of those branches easily.</EXAMPLE>
+                <EXAMPLE>Twigs break off of those branches easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -209,18 +218,15 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="together">
+                <PRED value="property">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="Co-Patient"/>
+                        <ARG type="ThemRole" value="Patient+Co-Patient"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
-                <PRED value="apart">
+                <PRED value="Adv">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="Co-Patient"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -228,7 +234,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Those twigs and branches broke apart easily.</EXAMPLE>
+                <EXAMPLE>Those twigs and branches break apart easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -241,18 +247,15 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="together">
+                <PRED value="property">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient_i"/>
-                        <ARG type="ThemRole" value="Patient_j"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
-                <PRED value="apart">
+                <PRED value="Adv">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Patient_i"/>
-                        <ARG type="ThemRole" value="Patient_j"/>
+                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>

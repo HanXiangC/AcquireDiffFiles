@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="risk-94" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="risk-94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="bet" wn="bet%2:32:00" grouping="bet.01"/>
         <MEMBER name="gamble" wn="gamble%2:41:00" grouping="gamble.01"/>
@@ -110,3 +111,15 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+
+
+
+
+
+
+
+
+
+
+
+

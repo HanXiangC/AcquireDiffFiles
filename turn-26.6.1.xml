@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="turn-26.6.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="turn-26.6.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="alter" wn="alter%2:30:01" grouping="alter.01"/>
         <MEMBER name="deform" wn="" grouping="deform.02"/>
@@ -23,7 +24,7 @@
         <THEMROLE type="Result">
             <SELRESTRS/>
         </THEMROLE>
-        <THEMROLE type="Initial_State">
+        <THEMROLE type="Material">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
@@ -44,7 +45,7 @@
                 <PREP value="from">
                     <SELRESTRS/>
                 </PREP>
-                <NP value="Initial_State">
+                <NP value="Material">
                     <SYNRESTRS/>
                 </NP>
                 <PREP value="into">
@@ -55,22 +56,32 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Initial_State"/>
+                        <ARG type="ThemRole" value="Material"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="state">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
                         <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED bool="!" value="state">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Material"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -94,7 +105,7 @@
                 <PREP value="from">
                     <SELRESTRS/>
                 </PREP>
-                <NP value="Initial_State">
+                <NP value="Material">
                     <SYNRESTRS/>
                 </NP>
                 <PREP value="into">
@@ -105,22 +116,32 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Initial_State"/>
+                        <ARG type="ThemRole" value="Material"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="state">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
                         <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED bool="!" value="state">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Material"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -146,22 +167,18 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
+                <PRED bool="!" value="state">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
                         <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -190,22 +207,18 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
+                <PRED bool="!" value="state">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
                         <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -222,22 +235,18 @@
                 <VERB/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="VerbSpecific" value="Material"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="VerbSpecific" value="Material"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -257,22 +266,32 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="state">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="state">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
                         <ARG type="ThemRole" value="?Result"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED bool="!" value="state">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Material"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -311,22 +330,32 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="?Material"/>
+                                <ARG type="ThemRole" value="Agent"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Result"/>
-                                <ARG type="ThemRole" value="?Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="ThemRole" value="Agent"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="state">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Result"/>
+                                <ARG type="ThemRole" value="Agent"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="state">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="VerbSpecific" value="?Material"/>
+                                <ARG type="ThemRole" value="Agent"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">
@@ -350,7 +379,7 @@
                         <PREP value="from">
                             <SELRESTRS/>
                         </PREP>
-                        <NP value="Initial_State">
+                        <NP value="Material">
                             <SYNRESTRS/>
                         </NP>
                         <PREP value="to">
@@ -361,22 +390,32 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Initial_State"/>
+                                <ARG type="VerbSpecific" value="Material"/>
                                 <ARG type="ThemRole" value="?Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED bool="!" value="state">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Result"/>
+                                <ARG type="ThemRole" value="?Patient"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Result"/>
                                 <ARG type="ThemRole" value="?Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="state">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="Material"/>
+                                <ARG type="ThemRole" value="?Patient"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">
@@ -388,7 +427,8 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="" primary="NP V PP.result  PP.material" secondary="PP-PP; w/ end state w/ beginning state" xtag=""/>
+                    <DESCRIPTION descriptionNumber="" primary="NP V
+                    PP.result  PP.material" secondary="PP-PP; w/ end state w/ beginning state" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>The thrift converted to a stock form of ownership from a mutual form in April 1986.</EXAMPLE>
                     </EXAMPLES>
@@ -406,27 +446,37 @@
                         <PREP value="from">
                             <SELRESTRS/>
                         </PREP>
-                        <NP value="Initial_State">
+                        <NP value="Material">
                             <SYNRESTRS/>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Initial_State"/>
+                                <ARG type="ThemRole" value="Material"/>
                                 <ARG type="ThemRole" value="?Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED bool="!" value="state">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Result"/>
+                                <ARG type="ThemRole" value="?Patient"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Result"/>
                                 <ARG type="ThemRole" value="?Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED bool="!" value="state">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="Material"/>
+                                <ARG type="ThemRole" value="?Patient"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">

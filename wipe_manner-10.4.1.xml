@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="wipe_manner-10.4.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="wipe_manner-10.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="buff" wn="?buff%2:35:00" grouping=""/>
         <MEMBER name="distill" wn="distill%2:30:03" grouping="distill.01"/>
@@ -42,11 +43,6 @@
                 <SELRESTR Value="+" type="location"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Destination">
-            <SELRESTRS>
-                <SELRESTR Value="+" type="location"/>
-            </SELRESTRS>
-        </THEMROLE>   
     </THEMROLES>
     <FRAMES>
         <FRAME>
@@ -78,22 +74,18 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Source"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/> 
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Source"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -119,22 +111,18 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="?Theme"/>
                         <ARG type="ThemRole" value="Source"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="?Theme"/>
-                        <ARG type="ThemRole" value="?Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Source"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -160,22 +148,18 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="?Source"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="?Source"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -238,13 +222,18 @@
                                 <ARG type="Event" value="E"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="location">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
                                 <ARG type="ThemRole" value="?Theme"/>
                                 <ARG type="ThemRole" value="Source"/>
-                                <ARG type="Constant" value="ch_of_loc"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="location">
+                            <ARGS>
+                                <ARG type="Event" value="end(E)"/>
+                                <ARG type="ThemRole" value="?Theme"/>
+                                <ARG type="ThemRole" value="Source"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>

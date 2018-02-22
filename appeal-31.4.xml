@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="appeal-31.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="appeal-31.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Stimulus">
@@ -37,10 +38,10 @@
                         <ARG type="ThemRole" value="Experiencer"/>
                     </ARGS>
                 </PRED>
-                <PRED value="in_reaction_to">
+                <PRED value="cause">
                     <ARGS>
-                        <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Stimulus"/>
+                        <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -78,10 +79,10 @@
                                 <ARG type="ThemRole" value="Experiencer"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="in_reaction_to">
+                        <PRED value="cause">
                             <ARGS>
-                                <ARG type="Event" value="E"/>
                                 <ARG type="ThemRole" value="Stimulus"/>
+                                <ARG type="Event" value="E"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -121,10 +122,10 @@
                                 <ARG type="ThemRole" value="Experiencer"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="in_reaction_to">
+                        <PRED value="cause">
                             <ARGS>
-                                <ARG type="Event" value="E"/>
                                 <ARG type="ThemRole" value="Stimulus"/>
+                                <ARG type="Event" value="E"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -135,6 +136,7 @@
         <VNSUBCLASS ID="appeal-31.4-3">
             <MEMBERS>
                 <MEMBER name="appeal" wn="appeal%2:37:00" grouping="appeal.03"/>
+                <MEMBER name="matter" wn="matter%2:42:00" grouping="matter.01"/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -157,10 +159,10 @@
                                 <ARG type="ThemRole" value="?Experiencer"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="in_reaction_to">
+                        <PRED value="cause">
                             <ARGS>
-                                <ARG type="Event" value="E"/>
                                 <ARG type="ThemRole" value="Stimulus"/>
+                                <ARG type="Event" value="E"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>

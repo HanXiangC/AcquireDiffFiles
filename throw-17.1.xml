@@ -1,9 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="throw-17.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="throw-17.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="cast" wn="cast%2:36:02 cast%2:35:00" grouping="cast.01"/>
         <MEMBER name="discard" wn="discard%2:40:00" grouping="discard.01"/>
-        <MEMBER name="drive" wn="drive%2:35:01" grouping="drive.04"/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -142,22 +142,18 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E1)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Destination"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E1)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -170,12 +166,6 @@
                     <ARGS>
                         <ARG type="Event" value="E0"/>
                         <ARG type="Event" value="E1"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="equals">
-                    <ARGS>
-                        <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="ThemRole" value="Initial_Location"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -231,13 +221,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E1)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -312,22 +300,18 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E1)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E1)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -357,7 +341,11 @@
                 <NP value="Theme">
                     <SYNRESTRS/>
                 </NP>
-                <ADV/>
+                <NP value="Destination">
+                    <SYNRESTRS>
+                        <SYNRESTR Value="+" type="adv_loc"/>
+                    </SYNRESTRS>
+                </NP>
             </SYNTAX>
             <SEMANTICS>
                 <PRED value="motion">
@@ -484,22 +472,18 @@
                                 <ARG type="ThemRole" value="Theme"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED bool="!" value="location">
                             <ARGS>
                                 <ARG type="Event" value="start(E1)"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Initial_Location"/>
-                                <ARG type="Constant" value="ch_of_loc"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="ThemRole" value="Destination"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="location">
                             <ARGS>
                                 <ARG type="Event" value="end(E1)"/>
                                 <ARG type="ThemRole" value="Theme"/>
                                 <ARG type="ThemRole" value="Destination"/>
-                                <ARG type="Constant" value="ch_of_loc"/>
-                                <ARG type="VerbSpecific" value="prep"/> 
                             </ARGS>
                         </PRED>
                         <PRED value="cause">
@@ -512,12 +496,6 @@
                             <ARGS>
                                 <ARG type="Event" value="E0"/>
                                 <ARG type="Event" value="E1"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="equals">
-                            <ARGS>
-                                <ARG type="ThemRole" value="Agent"/>
-                                <ARG type="ThemRole" value="Initial_Location"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -534,7 +512,7 @@
                         <MEMBER name="toss" wn="toss%2:35:04 toss%2:38:00 toss%2:35:05" grouping="toss.01 toss.04"/>
                     </MEMBERS>
                     <THEMROLES>
-                        <THEMROLE type="Causer">
+                        <THEMROLE type="Cause">
                             <SELRESTRS/>
                         </THEMROLE>
                     </THEMROLES>
@@ -545,7 +523,7 @@
                                 <EXAMPLE>The proposal throws the House's work into chaos.</EXAMPLE>
                             </EXAMPLES>
                             <SYNTAX>
-                                <NP value="Causer">
+                                <NP value="Cause">
                                     <SYNRESTRS/>
                                 </NP>
                                 <VERB/>
@@ -563,7 +541,7 @@
                                <PRED value="exert_force">
                                   <ARGS>
                                     <ARG type="Event" value="during(E)"/>
-                                    <ARG type="ThemRole" value="Causer"/>
+                                    <ARG type="ThemRole" value="Cause"/>
                                     <ARG type="ThemRole" value="Theme"/>
                                   </ARGS>
                                </PRED>
@@ -575,7 +553,7 @@
                                 <EXAMPLE>The proposal throws into chaos the House's proposal.</EXAMPLE>
                             </EXAMPLES>
                             <SYNTAX>
-                                <NP value="Causer">
+                                <NP value="Cause">
                                     <SYNRESTRS/>
                                 </NP>
                                 <VERB/>
@@ -593,7 +571,7 @@
                                <PRED value="exert_force">
                                   <ARGS>
                                     <ARG type="Event" value="during(E)"/>
-                                    <ARG type="ThemRole" value="Causer"/>
+                                    <ARG type="ThemRole" value="Cause"/>
                                     <ARG type="ThemRole" value="Theme"/>
                                   </ARGS>
                                </PRED>
@@ -606,3 +584,39 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

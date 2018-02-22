@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="carve-21.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="carve-21.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <!--class needs to be subdivided-->
     <MEMBERS/>
     <THEMROLES>
@@ -152,7 +153,7 @@
                                 <ARG type="ThemRole" value="Patient"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="utilize">
+                        <PRED value="use">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -164,7 +165,7 @@
                 <FRAME>
                     <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADVP-Middle" secondary="Middle Construction" xtag=""/>
                     <EXAMPLES>
-                        <EXAMPLE>The ice crushed easily.</EXAMPLE>
+                        <EXAMPLE>The ice crushes easily.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
                         <NP value="Patient">
@@ -174,17 +175,15 @@
                         <ADV/>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="degradation_material_integrity">
+                        <PRED value="property">
                             <ARGS>
-                                <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="VerbSpecific" value="Prop"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="physical_form">
+                        <PRED value="Adv">
                             <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="VerbSpecific" value="Form"/>
-                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="VerbSpecific" value="Prop"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -305,7 +304,7 @@
                         <PRED value="manner">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
-                                <ARG type="VerbSpecific" value="motion"/>
+                                <ARG type="VerbSpecific" value="Motion"/>
                                 <ARG type="ThemRole" value="Agent"/>
                             </ARGS>
                         </PRED>
@@ -354,7 +353,7 @@
                         <PRED value="manner">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
-                                <ARG type="VerbSpecific" value="motion"/>
+                                <ARG type="VerbSpecific" value="Motion"/>
                                 <ARG type="ThemRole" value="Agent"/>
                             </ARGS>
                         </PRED>
@@ -371,7 +370,7 @@
                                 <ARG type="ThemRole" value="Patient"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="utilize">
+                        <PRED value="use">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -383,7 +382,7 @@
                 <FRAME>
                     <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADVP-Middle" secondary="Middle Construction" xtag=""/>
                     <EXAMPLES>
-                        <EXAMPLE>The marble carved easily.</EXAMPLE>
+                        <EXAMPLE>Marble carves easily.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
                         <NP value="Patient">
@@ -393,10 +392,15 @@
                         <ADV/>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="degradation_material_integrity">
+                        <PRED value="property">
                             <ARGS>
-                                <ARG type="Event" value="result(E)"/>
                                 <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="VerbSpecific" value="Prop"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="Adv">
+                            <ARGS>
+                                <ARG type="VerbSpecific" value="Prop"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>

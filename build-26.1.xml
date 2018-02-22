@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="build-26.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="build-26.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--REMOVED "cook_up" and "hatch" misclassified-->
         <MEMBER name="arrange" wn="arrange%2:35:00 arrange%2:29:00 arrange%2:36:00" grouping="arrange.01"/>
@@ -81,24 +82,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -138,24 +121,6 @@
                 <VERB/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="?Product"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -204,24 +169,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -270,24 +217,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -336,24 +265,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -411,24 +322,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -489,24 +382,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -561,24 +436,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="?Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -639,24 +496,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -706,24 +545,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -775,24 +596,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="?Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -859,24 +662,6 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="?Initial_State"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Product"/>
-                        <ARG type="ThemRole" value="Material"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED bool="!" value="exist">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
@@ -945,24 +730,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -1011,24 +778,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -1080,24 +829,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -1158,24 +889,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -1233,24 +946,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -1295,3 +990,4 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+

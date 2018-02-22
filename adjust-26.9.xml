@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="adjust-26.9" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="adjust-26.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="adapt" wn="adapt%2:30:02" grouping="adapt.01"/>
         <MEMBER name="accommodate" wn="accommodate%2:30:00 accommodate%2:30:01" grouping="accommodate.02"/>
@@ -22,9 +23,6 @@
             <SELRESTRS/>
         </THEMROLE>
         <THEMROLE type="Goal">
-            <SELRESTRS/>
-        </THEMROLE>
-        <THEMROLE type="Source">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
@@ -82,28 +80,11 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="cause">
+                <PRED value="adjust">
                     <ARGS>
-                        <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="Event" value="E"/>
-                    </ARGS> 
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="?Source"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
+                        <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -131,28 +112,11 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="cause">
+                <PRED value="adjust">
                     <ARGS>
-                        <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="Event" value="E"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="?Source"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
+                        <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -177,28 +141,11 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="cause">
+                <PRED value="adjust">
                     <ARGS>
-                        <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="Event" value="E"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="?Source"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Event" value="during(E)"/>
+                        <ARG type="ThemRole" value="?Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -222,28 +169,11 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="cause">
+                <PRED value="adjust">
                     <ARGS>
-                        <ARG type="ThemRole" value="Agent"/>
-                        <ARG type="Event" value="E"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="ThemRole" value="?Source"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Event" value="during(E)"/>
+                        <ARG type="ThemRole" value="?Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
-                        <ARG type="Constant" value="ch_of_state"/>
-                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -251,3 +181,6 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+
