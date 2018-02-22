@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="care-88.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="care-88.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="mind" wn="mind%2:32:00 mind%2:31:02" grouping="mind.01"/>
     </MEMBERS>
@@ -10,7 +11,7 @@
                 <SELRESTR Value="+" type="organization"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Stimulus">
+        <THEMROLE type="Cause">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
@@ -46,7 +47,7 @@
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
-                <NP value="Stimulus">
+                <NP value="Cause">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="that_comp"/>
                     </SYNRESTRS>
@@ -63,7 +64,7 @@
                 <PRED value="in_reaction_to">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Stimulus"/>
+                        <ARG type="ThemRole" value="Cause"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -78,7 +79,7 @@
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
-                <NP value="Stimulus">
+                <NP value="Cause">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="wh_comp"/>
                     </SYNRESTRS>
@@ -95,7 +96,7 @@
                 <PRED value="in_reaction_to">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Stimulus"/>
+                        <ARG type="ThemRole" value="Cause"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -111,7 +112,7 @@
             <THEMROLES/>
             <FRAMES>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.stimulus what S" secondary="P-WHAT-S; about-PP" xtag="0.1"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.cause what S" secondary="P-WHAT-Sabout-PP" xtag="0.1"/>
                     <EXAMPLES>
                         <EXAMPLE>He doesn't care about what he should do.</EXAMPLE>
                     </EXAMPLES>
@@ -123,7 +124,7 @@
                         <PREP value="about">
                             <SELRESTRS/>
                         </PREP>
-                        <NP value="Stimulus">
+                        <NP value="Cause">
                             <SYNRESTRS>
                                 <SYNRESTR Value="+" type="what_extract"/>
                             </SYNRESTRS>
@@ -140,7 +141,7 @@
                         <PRED value="in_reaction_to">
                             <ARGS>
                                 <ARG type="Event" value="E"/>
-                                <ARG type="ThemRole" value="Stimulus"/>
+                                <ARG type="ThemRole" value="Cause"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -155,7 +156,7 @@
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
-                        <NP value="Stimulus">
+                        <NP value="Cause">
                             <SYNRESTRS>
                                 <SYNRESTR Value="+" type="what_extract"/>
                             </SYNRESTRS>
@@ -172,13 +173,13 @@
                         <PRED value="in_reaction_to">
                             <ARGS>
                                 <ARG type="Event" value="E"/>
-                                <ARG type="ThemRole" value="Stimulus"/>
+                                <ARG type="ThemRole" value="Cause"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.stimulus how/whether S" secondary="P-WH-S; about-PP" xtag="0.2"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.cause how/whether S" secondary="P-WH-Sabout-PP" xtag="0.2"/>
                     <EXAMPLES>
                         <EXAMPLE>He doesn't care about how/whether she comes.</EXAMPLE>
                     </EXAMPLES>
@@ -190,7 +191,7 @@
                         <PREP value="about">
                             <SELRESTRS/>
                         </PREP>
-                        <NP value="Stimulus">
+                        <NP value="Cause">
                             <SYNRESTRS>
                                 <SYNRESTR Value="+" type="wh_comp"/>
                             </SYNRESTRS>
@@ -207,7 +208,7 @@
                         <PRED value="in_reaction_to">
                             <ARGS>
                                 <ARG type="Event" value="E"/>
-                                <ARG type="ThemRole" value="Stimulus"/>
+                                <ARG type="ThemRole" value="Cause"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -217,3 +218,12 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="continue-55.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="continue-55.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="continue" wn="continue%2:42:01 continue%2:32:00 continue%2:42:12 continue%2:42:11 continue%2:30:10" grouping="continue.01 continue.02"/>
     </MEMBERS>
@@ -13,10 +14,13 @@
         <THEMROLE type="Theme">
             <SELRESTRS/>
         </THEMROLE>
-        <THEMROLE type="Final_Time">
+        <THEMROLE type="Time">
             <SELRESTRS>
                 <SELRESTR Value="+" type="time"/>
             </SELRESTRS>
+        </THEMROLE>
+        <THEMROLE type="Predicate">
+            <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
     <FRAMES>
@@ -30,9 +34,9 @@
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
-                <NP value="Theme">
+                <NP value="Predicate">
                     <SYNRESTRS>
-                        <SYNRESTR Value="+" type="rs_to_inf"/>
+                        <SYNRESTR Value="+" type="to_inf_rs"/>
                     </SYNRESTRS>
                 </NP>
             </SYNTAX>
@@ -40,26 +44,19 @@
                 <PRED value="continue">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Predicate"/>
                     </ARGS>
                 </PRED>
-                <PRED value="do">
+                <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Final_Time"/>
-                    </ARGS>
-                </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="" primary="NP.theme V" secondary="Intransitive; Inchoative" xtag=""/>
+            <DESCRIPTION descriptionNumber="" primary="NP.theme V" secondary="IntransitiveInchoative" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The storm continued.</EXAMPLE>
             </EXAMPLES>
@@ -74,13 +71,6 @@
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="time">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Final_Time"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -103,14 +93,7 @@
                         <ARG type="ThemRole" value="?Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
-                    <ARGS>
-                        <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="?Theme"/>
-                        <ARG type="ThemRole" value="?Final_Time"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="do">
+                <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
@@ -119,7 +102,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="" primary="NP V PP.time" secondary="PP; Time-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="" primary="NP V PP.time" secondary="PPTime-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The party continued until 8 PM.</EXAMPLE>
             </EXAMPLES>
@@ -142,17 +125,17 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
+                <PRED value="Prep">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Final_Time"/>
+                        <ARG type="ThemRole" value="Time"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="" primary="NP V PP.time" secondary="PP; Time-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="" primary="NP V PP.time" secondary="PPTime-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>We continued until 8 PM.</EXAMPLE>
             </EXAMPLES>
@@ -175,17 +158,17 @@
                         <ARG type="ThemRole" value="?Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="do">
+                <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="time">
+                <PRED value="Prep">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="?Theme"/>
-                        <ARG type="ThemRole" value="Final_Time"/>
+                        <ARG type="ThemRole" value="Time"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -193,3 +176,8 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+
+
+

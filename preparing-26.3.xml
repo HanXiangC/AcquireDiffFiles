@@ -1,11 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="preparing-26.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="preparing-26.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Agent">
             <SELRESTRS logic="or">
                 <SELRESTR Value="+" type="animate"/>
                 <SELRESTR Value="+" type="machine"/>
+            </SELRESTRS>
+        </THEMROLE>
+        <THEMROLE type="Product">
+            <SELRESTRS>
+                <SELRESTR Value="+" type="concrete"/>
             </SELRESTRS>
         </THEMROLE>
         <THEMROLE type="Beneficiary">
@@ -22,7 +28,7 @@
                 <MEMBER name="blend" wn="blend%2:35:00" grouping="blend.01"/>
                 <MEMBER name="brew" wn="brew%2:36:00" grouping="brew.01"/>
                 <MEMBER name="clear" wn="clear%2:30:09" grouping="clear.01"/>
-                <MEMBER name="cook" wn="cook%2:36:00" grouping="cook.01 cook.02"/>
+                <MEMBER name="cook" wn="cook%2:36:00" grouping="cook.01"/>
                 <MEMBER name="cook_up" wn="cook_up%2:36:01" grouping=""/>
                 <MEMBER name="fix" wn="fix%2:36:00" grouping="fix.04"/>
                 <MEMBER name="invent" wn="invent%2:36:00 invent%2:36:01" grouping="invent.01 invent.02"/>
@@ -37,13 +43,7 @@
                 <MEMBER name="cultivate" wn="cultivate%2:36:01" grouping="cultivate.02"/>
                 <!--'cultivate' does not take benefactive alternation!!! must divide.-->
             </MEMBERS>
-            <THEMROLES>
-            <THEMROLE type="Product">
-            <SELRESTRS>
-                <SELRESTR Value="+" type="concrete"/>
-            </SELRESTRS>
-            </THEMROLE>
-            </THEMROLES>
+            <THEMROLES/>
             <FRAMES>
                 <FRAME>
                     <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Basic Transitive" xtag="0.2"/>
@@ -60,24 +60,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -99,7 +81,7 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP.beneficiary NP" secondary="NP-NP; Beneficiary Object" xtag=""/>
+                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP.beneficiary NP" secondary="NP-NPBeneficiary Object" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>Donna fixed me a sandwich.</EXAMPLE>
                     </EXAMPLES>
@@ -116,24 +98,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -161,7 +125,7 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP PP.beneficiary" secondary="NP-PP; for-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP PP.beneficiary" secondary="NP-PPfor-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>Donna fixed a sandwich for me.</EXAMPLE>
                     </EXAMPLES>
@@ -181,24 +145,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="path_rel">
-                            <ARGS>
-                                <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="Product"/>
-                                <ARG type="ThemRole" value="?Material"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
-                            </ARGS>
-                        </PRED>
                         <PRED bool="!" value="exist">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
@@ -230,11 +176,10 @@
         </VNSUBCLASS>
         <VNSUBCLASS ID="preparing-26.3-2">
             <MEMBERS>
-                <!--Members specify the Endstate of the Patient-->
+                <!--Members specify the Endstate of the Product-->
                 <MEMBER name="barbeque" wn="barbeque%2:30:00" grouping=""/>
-                <MEMBER name="barbecue" wn="barbecue%2:30:00" grouping=""/>
                 <MEMBER name="boil" wn="boil%2:30:00" grouping="boil.02"/>
-                <MEMBER name="broil" wn="broil%2:30:00" grouping="broil.01"/>
+                <MEMBER name="broil" wn="broil%2:30:00" grouping=""/>
                 <MEMBER name="clean" wn="clean%2:30:01" grouping="clean.04"/>
                 <MEMBER name="fry" wn="fry%2:30:00" grouping="fry.02"/>
                 <MEMBER name="grill" wn="grill%2:30:00" grouping="grill.01"/>
@@ -252,13 +197,7 @@
                 <MEMBER name="wash" wn="wash%2:35:02 wash%2:35:00" grouping="wash.01"/>
                 <MEMBER name="weld" wn="" grouping=""/>
             </MEMBERS>
-            <THEMROLES>
-            <THEMROLE type="Patient">
-            <SELRESTRS>
-                <SELRESTR Value="+" type="concrete"/>
-            </SELRESTRS>
-            </THEMROLE>
-            </THEMROLES>
+            <THEMROLES/>
             <FRAMES>
                 <FRAME>
                     <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Basic Transitive" xtag="0.2"/>
@@ -270,27 +209,23 @@
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
-                        <NP value="Patient">
+                        <NP value="Product">
                             <SYNRESTRS/>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
+                        <PRED bool="!" value="state">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="Endstate"/>
+                                <ARG type="ThemRole" value="Product"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="?Product"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="Endstate"/>
+                                <ARG type="ThemRole" value="Product"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">
@@ -302,7 +237,7 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP.beneficiary NP" secondary="NP-NP; Beneficiary Object" xtag=""/>
+                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP.beneficiary NP" secondary="NP-NPBeneficiary Object" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>Donna grilled me steaks.</EXAMPLE>
                     </EXAMPLES>
@@ -314,27 +249,23 @@
                         <NP value="Beneficiary">
                             <SYNRESTRS/>
                         </NP>
-                        <NP value="Patient">
+                        <NP value="Product">
                             <SYNRESTRS/>
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
+                        <PRED bool="!" value="state">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="Endstate"/>
+                                <ARG type="ThemRole" value="Product"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="?Product"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="Endstate"/>
+                                <ARG type="ThemRole" value="Product"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">
@@ -352,7 +283,7 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP PP.beneficiary" secondary="NP-PP; for-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="2.2" primary="NP V NP PP.beneficiary" secondary="NP-PPfor-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>Donna grilled steaks for me.</EXAMPLE>
                     </EXAMPLES>
@@ -361,7 +292,7 @@
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
-                        <NP value="Patient">
+                        <NP value="Product">
                             <SYNRESTRS/>
                         </NP>
                         <PREP value="for">
@@ -372,22 +303,18 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="path_rel">
+                        <PRED bool="!" value="state">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Initial_State"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="Endstate"/>
+                                <ARG type="ThemRole" value="Product"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="path_rel">
+                        <PRED value="state">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="ThemRole" value="?Product"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                                <ARG type="Constant" value="ch_of_state"/>
-                                <ARG type="VerbSpecific" value="prep"/>
+                                <ARG type="VerbSpecific" value="Endstate"/>
+                                <ARG type="ThemRole" value="Product"/>
                             </ARGS>
                         </PRED>
                         <PRED value="cause">

@@ -1,9 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="declare-29.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
-    <MEMBERS>
-        <MEMBER name="avow" wn="avow%2:32:00" grouping=""/>
-        <MEMBER name="confess" wn="confess%2:32:01" grouping="confess.01"/>
-    </MEMBERS>
+<VNCLASS ID="declare-29.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+    <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Agent">
             <SELRESTRS>
@@ -13,7 +11,7 @@
         <THEMROLE type="Theme">
             <SELRESTRS/>
         </THEMROLE>
-        <THEMROLE type="Result">
+        <THEMROLE type="Predicate">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
@@ -31,11 +29,7 @@
                 <NP value="Theme">
                     <SYNRESTRS/>
                 </NP>
-                <NP value="Result">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="-" type="sentential"/>
-                    </SYNRESTRS>
-                </NP>
+                <ADJ/>
             </SYNTAX>
             <SEMANTICS>
                 <PRED value="declare">
@@ -43,7 +37,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="?Predicate"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -61,7 +55,7 @@
                 <NP value="Theme">
                     <SYNRESTRS/>
                 </NP>
-                <NP value="Result">
+                <NP value="Predicate">
                     <SYNRESTRS>
                         <SYNRESTR Value="-" type="sentential"/>
                     </SYNRESTRS>
@@ -73,7 +67,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Predicate"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -100,7 +94,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="?Predicate"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -108,7 +102,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="0.2" primary="NP V NP ADJ" secondary="NP-VEN-NP-OMIT" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>The president declared the matter closed.</EXAMPLE>
+                <EXAMPLE>The president judged the matter closed.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -120,11 +114,6 @@
                         <SYNRESTR Value="+" type="np_ppart"/>
                     </SYNRESTRS>
                 </NP>
-                <NP value="Result">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="-" type="sentential"/>
-                    </SYNRESTRS>
-                </NP>
             </SYNTAX>
             <SEMANTICS>
                 <PRED value="declare">
@@ -132,7 +121,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="?Predicate"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -159,7 +148,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="?Predicate"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -168,9 +157,7 @@
     <SUBCLASSES>
         <VNSUBCLASS ID="declare-29.4-1">
             <MEMBERS>
-                <MEMBER name="adjudge" wn="adjudge%2:32:00" grouping=""/>
-                <MEMBER name="assume" wn="assume%2:31:00" grouping="assume.02"/>
-                <MEMBER name="maintain" wn="maintain%2:32:00" grouping="maintain.02"/>
+                <MEMBER name="maintain" wn="" grouping=""/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -196,13 +183,40 @@
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="?Predicate"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="0.2" primary="NP V NP ADJ" secondary="NP-PP; as-PP" xtag=""/>
+                    <DESCRIPTION descriptionNumber="0.2" primary="NP V what S_INF" secondary="WHAT-TO-INF" xtag=""/>
+                    <EXAMPLES>
+                        <EXAMPLE>The president declared what to do.</EXAMPLE>
+                    </EXAMPLES>
+                    <SYNTAX>
+                        <NP value="Agent">
+                            <SYNRESTRS/>
+                        </NP>
+                        <VERB/>
+                        <NP value="Theme">
+                            <SYNRESTRS>
+                                <SYNRESTR Value="+" type="what_inf"/>
+                            </SYNRESTRS>
+                        </NP>
+                    </SYNTAX>
+                    <SEMANTICS>
+                        <PRED value="declare">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="?Predicate"/>
+                            </ARGS>
+                        </PRED>
+                    </SEMANTICS>
+                </FRAME>
+                <FRAME>
+                    <DESCRIPTION descriptionNumber="0.2" primary="NP V NP ADJ" secondary="NP-PPas-PP" xtag=""/>
                     <EXAMPLES>
                         <EXAMPLE>The president declared John as stupid.</EXAMPLE>
                     </EXAMPLES>
@@ -217,11 +231,7 @@
                         <PREP value="as">
                             <SELRESTRS/>
                         </PREP>
-                        <NP value="Result">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="-" type="sentential"/>
-                    </SYNRESTRS>
-                        </NP>
+                        <ADJ/>
                     </SYNTAX>
                     <SEMANTICS>
                         <PRED value="declare">
@@ -229,7 +239,7 @@
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="?Predicate"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -242,34 +252,6 @@
                     </MEMBERS>
                     <THEMROLES/>
                     <FRAMES>
-                        <FRAME>
-                            <DESCRIPTION descriptionNumber="0.2" primary="NP V what S_INF" secondary="WHAT-TO-INF" xtag=""/>
-                            <EXAMPLES>
-                                <EXAMPLE>The president declared what to
-                                do.</EXAMPLE>
-                            </EXAMPLES>
-                            <SYNTAX>
-                                <NP value="Agent">
-                                    <SYNRESTRS/>
-                                </NP>
-                                <VERB/>
-                                <NP value="Theme">
-                                    <SYNRESTRS>
-                                        <SYNRESTR Value="+" type="what_inf"/>
-                                    </SYNRESTRS>
-                                </NP>
-                            </SYNTAX>
-                            <SEMANTICS>
-                                <PRED value="declare">
-                                    <ARGS>
-                                        <ARG type="Event" value="during(E)"/>
-                                        <ARG type="ThemRole" value="Agent"/>
-                                        <ARG type="ThemRole" value="Theme"/>
-                                        <ARG type="ThemRole" value="?Result"/>
-                                    </ARGS>
-                                </PRED>
-                            </SEMANTICS>
-                        </FRAME>
                         <FRAME>
                             <DESCRIPTION descriptionNumber="0.2" primary="NP V how S" secondary="HOW-S" xtag=""/>
                             <EXAMPLES>
@@ -292,7 +274,7 @@
                                         <ARG type="Event" value="during(E)"/>
                                         <ARG type="ThemRole" value="Agent"/>
                                         <ARG type="ThemRole" value="Theme"/>
-                                        <ARG type="ThemRole" value="?Result"/>
+                                        <ARG type="ThemRole" value="?Predicate"/>
                                     </ARGS>
                                 </PRED>
                             </SEMANTICS>
@@ -327,7 +309,7 @@
                                                 <ARG type="Event" value="during(E)"/>
                                                 <ARG type="ThemRole" value="Agent"/>
                                                 <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="?Result"/>
+                                                <ARG type="ThemRole" value="?Predicate"/>
                                             </ARGS>
                                         </PRED>
                                     </SEMANTICS>
@@ -365,7 +347,7 @@
                                                 <ARG type="Event" value="during(E)"/>
                                                 <ARG type="ThemRole" value="Agent"/>
                                                 <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="?Result"/>
+                                                <ARG type="ThemRole" value="?Predicate"/>
                                             </ARGS>
                                         </PRED>
                                     </SEMANTICS>
@@ -392,7 +374,7 @@
                                                 <ARG type="Event" value="during(E)"/>
                                                 <ARG type="ThemRole" value="Agent"/>
                                                 <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="?Result"/>
+                                                <ARG type="ThemRole" value="?Predicate"/>
                                             </ARGS>
                                         </PRED>
                                     </SEMANTICS>
@@ -429,7 +411,7 @@
                                                 <ARG type="Event" value="during(E)"/>
                                                 <ARG type="ThemRole" value="Agent"/>
                                                 <ARG type="ThemRole" value="Theme"/>
-                                                <ARG type="ThemRole" value="?Result"/>
+                                                <ARG type="ThemRole" value="?Predicate"/>
                                             </ARGS>
                                         </PRED>
                                     </SEMANTICS>
@@ -444,7 +426,7 @@
         </VNSUBCLASS>
         <VNSUBCLASS ID="declare-29.4-2">
             <MEMBERS>
-                <MEMBER name="proclaim" wn="proclaim%2:32:02" grouping="proclaim.02"/>
+                <MEMBER name="proclaim" wn="proclaim%2:32:02" grouping="proclaim.01"/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -470,7 +452,7 @@
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="?Predicate"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -497,7 +479,7 @@
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="?Predicate"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -507,3 +489,7 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+
+
+
+

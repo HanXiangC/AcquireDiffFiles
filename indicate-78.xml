@@ -1,14 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="indicate-78" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="indicate-78" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="imply" wn="imply%2:32:00 imply%2:32:01 imply%2:42:02" grouping="imply.01 imply.02"/>
         <MEMBER name="predict" wn="predict%2:32:01" grouping="predict.01"/>
         <MEMBER name="denote" wn="" grouping=""/>
         <MEMBER name="corroborate" wn="" grouping=""/>
         <MEMBER name="expose" wn="" grouping=""/>
-        <MEMBER name="prognosticate" wn="prognosticate%2:32:01" grouping=""/>
-        <MEMBER name="forebode" wn="forebode%2:32:00" grouping=""/>
-        <MEMBER name="anticipate" wn="anticipate%2:32:00" grouping="anticipate.03"/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Recipient">
@@ -17,7 +15,7 @@
                 <SELRESTR Value="+" type="organization"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Causer">
+        <THEMROLE type="Cause">
             <SELRESTRS/>
         </THEMROLE>
         <THEMROLE type="Topic">
@@ -31,7 +29,7 @@
                 <EXAMPLE>This indicates how she did it.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Causer">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -45,7 +43,7 @@
                 <PRED value="indicate">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Causer"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="ThemRole" value="?Recipient"/>
                         <ARG type="ThemRole" value="Topic"/>
                     </ARGS>
@@ -58,7 +56,7 @@
                 <EXAMPLE>This indicates how to do it.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Causer">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -72,7 +70,7 @@
                 <PRED value="indicate">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Causer"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="ThemRole" value="?Recipient"/>
                         <ARG type="ThemRole" value="Topic"/>
                     </ARGS>
@@ -85,7 +83,7 @@
                 <EXAMPLE>This indicates it.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Causer">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -99,7 +97,7 @@
                 <PRED value="indicate">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Causer"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="ThemRole" value="?Recipient"/>
                         <ARG type="ThemRole" value="Topic"/>
                     </ARGS>
@@ -112,7 +110,7 @@
                 <EXAMPLE>This indicates whether he is the thief.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Causer">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -126,7 +124,7 @@
                 <PRED value="indicate">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Causer"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="ThemRole" value="?Recipient"/>
                         <ARG type="ThemRole" value="Topic"/>
                     </ARGS>
@@ -139,7 +137,7 @@
                 <EXAMPLE>This indicates what he should do.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Causer">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -153,7 +151,7 @@
                 <PRED value="indicate">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Causer"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="ThemRole" value="?Recipient"/>
                         <ARG type="ThemRole" value="Topic"/>
                     </ARGS>
@@ -165,18 +163,18 @@
         <VNSUBCLASS ID="indicate-78-1">
             <MEMBERS>
                 <MEMBER name="explain" wn="explain%2:32:01" grouping="explain.01"/>
-                <MEMBER name="indicate" wn="indicate%2:32:03" grouping="indicate.02"/>
+                <MEMBER name="indicate" wn="indicate%2:32:03 " grouping="indicate.02"/>
                 <MEMBER name="say" wn="say%2:32:09" grouping="say.02"/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient that S" secondary="PP-THAT-S-SUBJUNCT; to-PP" xtag="0.1"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient that S" secondary="PP-THAT-S-SUBJUNCTto-PP" xtag="0.1"/>
                     <EXAMPLES>
                         <EXAMPLE>This indicates to us that they had stolen money.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Causer">
+                        <NP value="Cause">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -197,7 +195,7 @@
                         <PRED value="indicate">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Causer"/>
+                                <ARG type="ThemRole" value="Cause"/>
                                 <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Topic"/>
                             </ARGS>
@@ -205,12 +203,12 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient whether/if S" secondary="PP-WH-S; to-PP" xtag="0.1"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient whether/if S" secondary="PP-WH-Sto-PP" xtag="0.1"/>
                     <EXAMPLES>
                         <EXAMPLE>This indicates to me whether they did it.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Causer">
+                        <NP value="Cause">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -230,7 +228,7 @@
                         <PRED value="indicate">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Causer"/>
+                                <ARG type="ThemRole" value="Cause"/>
                                 <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Topic"/>
                             </ARGS>
@@ -238,12 +236,12 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient what S" secondary="PP-WHAT-S; to-PP" xtag="0.1"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient what S" secondary="PP-WHAT-Sto-PP" xtag="0.1"/>
                     <EXAMPLES>
                         <EXAMPLE>This indicates to me what he is.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Causer">
+                        <NP value="Cause">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -263,7 +261,7 @@
                         <PRED value="indicate">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Causer"/>
+                                <ARG type="ThemRole" value="Cause"/>
                                 <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Topic"/>
                             </ARGS>
@@ -271,12 +269,12 @@
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient how S" secondary="PP-HOW-S; to-PP" xtag="0.1"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.recipient how S" secondary="PP-HOW-Sto-PP" xtag="0.1"/>
                     <EXAMPLES>
-                        <EXAMPLE>This indicates to us how it happened.</EXAMPLE>
+                        <EXAMPLE>This indicates to us how it happended.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
-                        <NP value="Causer">
+                        <NP value="Cause">
                             <SYNRESTRS/>
                         </NP>
                         <VERB/>
@@ -296,7 +294,7 @@
                         <PRED value="indicate">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Causer"/>
+                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Topic"/>
                             </ARGS>
@@ -311,13 +309,12 @@
                         <MEMBER name="reaffirm" wn="" grouping=""/>
                         <MEMBER name="disclose" wn="" grouping=""/>
                         <MEMBER name="verify" wn="" grouping=""/>
-                        <MEMBER name="confirm" wn="" grouping="confirm.01 confirm.02"/>
+                        <MEMBER name="confirm" wn="" grouping=""/>
                         <MEMBER name="demonstrate" wn="demonstrate%2:31:00" grouping="demonstrate.01"/>
                         <MEMBER name="establish" wn="establish%2:31:00" grouping="establish.02"/>
                         <MEMBER name="prove" wn="prove%2:31:00" grouping="prove.01"/>
                         <MEMBER name="reveal" wn="" grouping=""/>
                         <MEMBER name="show" wn="show%2:31:00" grouping="show.01"/>
-                        <MEMBER name="suggest" wn="suggest%2:32:02                         suggest%2:32:01" grouping="suggest.03"/>
                     </MEMBERS>
                     <THEMROLES/>
                     <FRAMES>
@@ -327,7 +324,7 @@
                                 <EXAMPLE>This indicates him to be the thief.</EXAMPLE>
                             </EXAMPLES>
                             <SYNTAX>
-                                <NP value="Causer">
+                                <NP value="Cause">
                                     <SYNRESTRS/>
                                 </NP>
                                 <VERB/>
@@ -341,7 +338,7 @@
                                 <PRED value="indicate">
                                     <ARGS>
                                         <ARG type="Event" value="during(E)"/>
-                                        <ARG type="ThemRole" value="Causer"/>
+                                        <ARG type="ThemRole" value="Cause"/>
                                         <ARG type="ThemRole" value="?Recipient"/>
                                         <ARG type="ThemRole" value="Topic"/>
                                     </ARGS>
@@ -355,3 +352,6 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
+
+
+

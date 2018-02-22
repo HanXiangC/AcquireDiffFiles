@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="smell_emission-43.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="smell_emission-43.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="reek" wn="reek%2:39:00" grouping=""/>
         <MEMBER name="smell" wn="smell%2:39:00 smell%2:39:02" grouping="smell.03 smell.04 smell.06"/>
@@ -38,7 +39,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.1" primary="NP.location V" secondary="Intransitive; Location subject" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.1" primary="NP.location V" secondary="IntransitiveLocation subject" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The room reeked.</EXAMPLE>
             </EXAMPLES>
@@ -66,7 +67,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP.theme" secondary="PP; of-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP.theme" secondary="PPof-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>The room reeked of onions.</EXAMPLE>
             </EXAMPLES>
@@ -103,3 +104,4 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+

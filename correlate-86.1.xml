@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="correlate-86.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="correlate-86.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
-        <MEMBER name="coincide" wn="" grouping="coincide.02"/>
-        <MEMBER name="correlate" wn="" grouping="correlate.01"/>
-        <MEMBER name="alternate" wn="" grouping="alternate.03"/>
+        <MEMBER name="coincide" wn="" grouping=""/>
+        <MEMBER name="correlate" wn="" grouping=""/>
+        <MEMBER name="alternate" wn="" grouping=""/>
         <MEMBER name="flip-flop" wn="" grouping=""/>
         <MEMBER name="co-occur" wn="co-occur%2:42:00" grouping=""/>
     </MEMBERS>
@@ -14,28 +15,28 @@
                 <SELRESTR Value="+" type="organization"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Theme">
+        <THEMROLE type="Theme1">
             <SELRESTRS/>
         </THEMROLE>
-        <THEMROLE type="Co-Theme">
+        <THEMROLE type="Theme2">
             <SELRESTRS/>
         </THEMROLE>
     </THEMROLES>
     <FRAMES>
         <FRAME>
-            <DESCRIPTION descriptionNumber="8.1" primary="NP V S_ING" secondary="P-ING-AC; with-PP" xtag="0.2"/>
+            <DESCRIPTION descriptionNumber="8.1" primary="NP V S_ING" secondary="P-ING-ACwith-PP" xtag="0.2"/>
             <EXAMPLES>
                 <EXAMPLE>He alternates with keeping them.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Theme">
+                <NP value="Theme1">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
                 <PREP value="with">
                     <SELRESTRS/>
                 </PREP>
-                <NP value="Co-Theme">
+                <NP value="Theme2">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="ac_ing"/>
                     </SYNRESTRS>
@@ -45,14 +46,14 @@
                 <PRED value="correlate">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Co-Theme"/>
+                        <ARG type="ThemRole" value="Theme1"/>
+                        <ARG type="ThemRole" value="Theme2"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="8.1" primary="NP V NP S_ING" secondary="NP-P-ING-AC; with-PP" xtag="0.2"/>
+            <DESCRIPTION descriptionNumber="8.1" primary="NP V NP S_ING" secondary="NP-P-ING-ACwith-PP" xtag="0.2"/>
             <EXAMPLES>
                 <EXAMPLE>We alternated it with keeping them locked up.</EXAMPLE>
             </EXAMPLES>
@@ -61,13 +62,13 @@
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
-                <NP value="Theme">
+                <NP value="Theme1">
                     <SYNRESTRS/>
                 </NP>
                 <PREP value="with">
                     <SELRESTRS/>
                 </PREP>
-                <NP value="Co-Theme">
+                <NP value="Theme2">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="ac_ing"/>
                     </SYNRESTRS>
@@ -76,15 +77,15 @@
             <SEMANTICS>
                 <PRED value="cause">
                     <ARGS>
-                        <ARG type="ThemRole" value="E"/>
                         <ARG type="Event" value="E"/>
+                        <ARG type="ThemRole" value="Agent"/>
                     </ARGS>
                 </PRED>
                 <PRED value="correlate">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Co-Theme"/>
+                        <ARG type="ThemRole" value="Theme1"/>
+                        <ARG type="ThemRole" value="Theme2"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -92,3 +93,6 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+

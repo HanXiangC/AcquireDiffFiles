@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ensure-99" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="ensure-99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="ensure" wn="ensure%2:32:00" grouping="ensure.01"/>
         <MEMBER name="assure" wn="assure%2:32:03" grouping="assure.02"/>
@@ -7,11 +8,9 @@
         <MEMBER name="insure" wn="insure%2:32:04" grouping="insure.02"/>
         <MEMBER name="secure" wn="secure%2:32:00" grouping="secure.01"/>
         <MEMBER name="ascertain" wn="ascertain%2:31:00" grouping="ascertain.02"/>
-        <MEMBER name="reinsure" wn="reinsure%2:40:00 reinsure%2:32:00         reinsure%2:32:01" grouping=""/>
-        <MEMBER name="provide" wn="provide%2:32:00" grouping="provide.03"/>
     </MEMBERS>
     <THEMROLES>
-        <THEMROLE type="Precondition">
+        <THEMROLE type="Cause">
             <SELRESTRS/>
         </THEMROLE>
         <THEMROLE type="Theme">
@@ -28,7 +27,7 @@
                 <EXAMPLE>Our exertions ensured a good outcome.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Precondition">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -39,7 +38,7 @@
             <SEMANTICS>
                 <PRED value="cause">
                     <ARGS>
-                        <ARG type="ThemRole" value="Precondition"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
@@ -57,7 +56,7 @@
                 <EXAMPLE>Our exertions ensured us a good outcome.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Precondition">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -73,7 +72,7 @@
             <SEMANTICS>
                 <PRED value="cause">
                     <ARGS>
-                        <ARG type="ThemRole" value="Precondition"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
@@ -86,12 +85,12 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.beneficiary" secondary="NP-PP; for-PP" xtag="0.2"/>
+            <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.beneficiary" secondary="NP-PPfor-PP" xtag="0.2"/>
             <EXAMPLES>
                 <EXAMPLE>The circumstances ensured a good outcome for him.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Precondition">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -108,7 +107,7 @@
             <SEMANTICS>
                 <PRED value="cause">
                     <ARGS>
-                        <ARG type="ThemRole" value="Precondition"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
@@ -126,10 +125,13 @@
                 <EXAMPLE>The circumstances ensured that he would arrive in time.</EXAMPLE>                                                              
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Precondition">
+                <NP value="Cause">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
+                <NP value="Beneficiary">
+                    <SYNRESTRS/>
+                </NP>
                 <NP value="Theme">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="oc_to_inf"/>
@@ -139,7 +141,7 @@
             <SEMANTICS>
                 <PRED value="cause">
                     <ARGS>
-                        <ARG type="ThemRole" value="Precondition"/>
+                        <ARG type="ThemRole" value="Cause"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
@@ -154,3 +156,6 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
+
+

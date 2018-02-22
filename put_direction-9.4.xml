@@ -1,19 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="put_direction-9.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS ID="put_direction-9.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Direction for this class is "against gravity"-->
-        <MEMBER name="drop" wn="drop%2:38:01" grouping="drop.01 drop.02         drop.04"/>
-        <MEMBER name="drive" wn="drive%2:35:06" grouping="drive.05"/>
-        <MEMBER name="elevate" wn="elevate%2:38:00" grouping="elevate.02 elevate.04"/>
-        <MEMBER name="heel" wn="heel%2:38:01" grouping="heel.01"/>
+        <MEMBER name="drop" wn="drop%2:38:01" grouping="drop.01"/>
+        <MEMBER name="elevate" wn="elevate%2:38:00" grouping="elevate.02"/>
         <MEMBER name="hoist" wn="hoist%2:35:00 hoist%2:35:10 hoist%2:35:01" grouping=""/>
         <MEMBER name="lift" wn="lift%2:38:00 lift%2:35:00 lift%2:35:01" grouping="lift.01"/>
         <MEMBER name="lower" wn="lower%2:38:00" grouping="lower.01"/>
         <MEMBER name="raise" wn="raise%2:38:00" grouping="raise.02"/>
-        <MEMBER name="back" wn="back%2:38:01" grouping=""/>
     </MEMBERS>
     <THEMROLES>
-        <!--Destination can also be realized as a locative adverb ("here, there")
+        <!--Location can also be realized as a locative adverb ("here, there")
         Levin doesn't include Instrument or Instrument Subject Alternation ("the crane lifted the beam over the building")-->
         <THEMROLE type="Agent">
             <SELRESTRS>
@@ -25,18 +23,13 @@
                 <SELRESTR Value="+" type="concrete"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Initial_Location">
-            <SELRESTRS>
-                <SELRESTR Value="+" type="location"/>
-            </SELRESTRS>
-        </THEMROLE>
-        <THEMROLE type="Destination">
+        <THEMROLE type="Location">
             <SELRESTRS>
                 <SELRESTR Value="+" type="location"/>
                 <SELRESTR Value="-" type="region"/>
             </SELRESTRS>
         </THEMROLE>
-        <!--Exception: If Destination is object of a source-type preposition ("from"), then +region is allowed-->
+        <!--Exception: If Location is object of a source-type preposition ("from"), then +region is allowed-->
     </THEMROLES>
     <FRAMES>
         <FRAME>
@@ -60,37 +53,12 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
                 <PRED value="exert_force">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="direction">
-                    <ARGS>
-                        <ARG type="Event" value="during(E)"/>
-                        <ARG type="Constant" value="toward"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/> 
+                        <ARG type="VerbSpecific" value="Direction"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -102,7 +70,7 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.destination" secondary="NP-PP; locative-PP" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.location" secondary="NP-PPlocative-PP" xtag=""/>
             <EXAMPLES>
                 <EXAMPLE>I lifted the books onto the table.</EXAMPLE>
             </EXAMPLES>
@@ -119,7 +87,7 @@
                         <SELRESTR Value="+" type="spatial"/>
                     </SELRESTRS>
                 </PREP>
-                <NP value="Destination">
+                <NP value="Location">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -130,22 +98,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="path_rel">
+                <PRED value="Prep">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
                 <PRED value="exert_force">
@@ -153,14 +110,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="direction">
-                    <ARGS>
-                        <ARG type="Event" value="during(E)"/>
-                        <ARG type="Constant" value="toward"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
+                        <ARG type="VerbSpecific" value="Direction"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -172,8 +122,8 @@
             </SEMANTICS>
         </FRAME>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP ADVP" secondary="NP-ADVP-PRED; here/there" xtag=""/>
-            <!-- discourse has to provide specific Destination and configuration (Prep) of Theme wrt Destination-->
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP ADVP" secondary="NP-ADVP-PREDhere/there" xtag=""/>
+            <!-- discourse has to provide specific Location and configuration (Prep) of Theme wrt Location-->
             <EXAMPLES>
                 <EXAMPLE>I dropped the books here.</EXAMPLE>
             </EXAMPLES>
@@ -185,7 +135,7 @@
                 <NP value="Theme">
                     <SYNRESTRS/>
                 </NP>
-                <NP value="Destination">
+                <NP value="Location">
                     <SYNRESTRS>
                         <SYNRESTR Value="+" type="adv_loc"/>
                     </SYNRESTRS>
@@ -198,22 +148,11 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-               <PRED value="path_rel">
+                <PRED value="Prep">
                     <ARGS>
-                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Initial_Location"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="path_rel">
-                    <ARGS>
-                        <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
-                        <ARG type="Constant" value="ch_of_loc"/>
-                        <ARG type="VerbSpecific" value="prep"/>
+                        <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
                 <PRED value="exert_force">
@@ -221,14 +160,7 @@
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="direction">
-                    <ARGS>
-                        <ARG type="Event" value="during(E)"/>
-                        <ARG type="Constant" value="toward"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
+                        <ARG type="VerbSpecific" value="Direction"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -242,3 +174,4 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
+
